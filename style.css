@@ -36,14 +36,11 @@ body {
     float: left;
 }
 
-.addButton {
-    margin-right: 10px;
-    float: left;
-    background-color: rgb(94,94,94);
-    color: black;
-}
-
-.viewButton {
+.addButton, .viewButton {
+    border-radius: 8px;
+    width: 40px;
+    height: 30px;
+    margin-right: 20px;
     float: left;
     background-color: rgb(94,94,94);
     color: black;
