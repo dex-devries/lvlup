@@ -16,9 +16,15 @@ body {
     height: 135px;
 }
 
+#logoHeader {
+    /* display: block;
+    margin: auto; */
+    width: 330px;
+    height: 115px;
+}
+
 .buttons {
     float: left;
-    padding-left: 0px;
     width: 210px;
     height: 30px;
 }
@@ -31,14 +37,13 @@ body {
 }
 
 .addButton {
-    margin: 2px;
+    margin-right: 10px;
     float: left;
     background-color: rgb(94,94,94);
     color: black;
 }
 
 .viewButton {
-    margin: 2px;
     float: left;
     background-color: rgb(94,94,94);
     color: black;
@@ -55,10 +60,10 @@ body {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     display: grid;
     grid:
-      "Agility Intelligence" 1fr
-      "Strength Skill" 1fr
-      "Attack Presence" 1fr
-      "Alchemy Power" 1fr
+      "Agility Intelligence" 20%
+      "Strength Skill" 20%
+      "Attack Presence" 20%
+      "Alchemy Power" 20%
       / 1fr 1fr;
     gap: 8px;
   }
