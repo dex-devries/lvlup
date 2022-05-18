@@ -12,15 +12,16 @@ body {
 
 .header {
     margin: auto;
+    padding-left: 10px;
     width: 375px;
-    height: 135px;
+    height: 90px;
 }
 
 #logoHeader {
     /* display: block;
     margin: auto; */
     width: 330px;
-    height: 115px;
+    height: 90px;
 }
 
 .buttons {
@@ -57,16 +58,16 @@ body {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     display: grid;
     grid:
-      "Agility Intelligence" 20%
-      "Strength Skill" 20%
-      "Attack Presence" 20%
-      "Alchemy Power" 20%
-      / 1fr 1fr;
+      "Agility Intellect" 17%
+      "Strength Skill" 17%
+      "Attack Presence" 17%
+      "Alchemy Power" 17%
+      / 49% 49%;
     gap: 8px;
   }
   
   .Agility { grid-area: Agility; }
-  .Intelligence { grid-area: Intelligence; }
+  .Intellect { grid-area: Intellect; }
   .Strength { grid-area: Strength; }
   .Skill { grid-area: Skill; }
   .Attack { grid-area: Attack; }
