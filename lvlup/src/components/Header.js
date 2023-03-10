@@ -1,9 +1,9 @@
-import "./style.module.css";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <img src={require("../assets/logo2.jpg")} alt="Level up logo"></img>
+    <div className="header">
+      <img className="logoHeader" src={require("../assets/logo2.jpg")} alt="Level up logo" style={{width: '330px'}}></img>
     </div>
   );
 };
