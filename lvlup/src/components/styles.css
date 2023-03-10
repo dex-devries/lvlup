@@ -4,10 +4,11 @@ body {
 
 .abilityHeader {
     float: left;
-    margin-left: 5px;
+    margin-left: 15px;
     font-size: 20px;
     color: white;
     font-weight: bold;
+    height: 15px;
 }
 
 .abilityImage {
@@ -17,12 +18,26 @@ body {
 
 .header {
     margin: 2rem auto;
-    padding-left: 70px;
+    padding-left: 80px;
     height: 60px;
 }
 
 .logoHeader {
     width: 300px;
+}
+.attributeStats {
+    float:left;
+    width: 65%;
+    height: 60px;
+    padding: 0px;
+    margin:0px;
+}
+.attributeLevel, .attributeXP {
+    font-size:large;
+}
+.attributeData {
+    float: right;
+    color: goldenrod;
 }
 
 .buttons {
@@ -50,7 +65,7 @@ body {
 }
 
 .layout {
-    width: 375px;
+    width: 400px;
     height: 800px;
 
     margin: auto;
@@ -60,10 +75,10 @@ body {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     display: grid;
     grid:
-      "agility intellect" 17%
-      "strength skill" 17%
-      "attack presence" 17%
-      "alchemy power" 17%
+      "agility intellect" 18%
+      "strength skill" 18%
+      "attack presence" 18%
+      "alchemy power" 18%
       / 49% 49%;
     gap: 8px;
   }
