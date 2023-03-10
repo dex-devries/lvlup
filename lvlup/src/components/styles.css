@@ -2,6 +2,23 @@ body {
     background-color: black;
 }
 
+.activityMenu {
+    width: 300px;
+    height: 300px;
+    margin-left: 50px;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 15px;
+    border: 1px solid white;
+}
+
+.menuInput {
+    float: right;
+    width: 65%;
+}
+
 .abilityHeader {
     float: left;
     margin-left: 15px;
@@ -75,10 +92,10 @@ body {
     font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     display: grid;
     grid:
-      "agility intellect" 18%
-      "strength skill" 18%
-      "attack presence" 18%
-      "alchemy power" 18%
+      "agility intellect" 17%
+      "strength skill" 17%
+      "attack presence" 17%
+      "alchemy power" 17%
       / 49% 49%;
     gap: 8px;
   }
