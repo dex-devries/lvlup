@@ -1,9 +1,8 @@
-import styles from './components/style.module.css';
+import Grid from './components/Grid';
 
 function App() {
   return (
-    <>
-    </>
+    <Grid data/>
   );
 }
 
