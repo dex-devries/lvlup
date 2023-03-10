@@ -10,18 +10,20 @@ body {
     font-weight: bold;
 }
 
-.header {
-    margin: auto;
-    padding-left: 10px;
-    width: 375px;
-    height: 90px;
+.abilityImage {
+    float:left;
+    width:40px;
 }
 
-#logoHeader {
+.header {
+    margin: 2rem auto;
+    padding-left: 70px;
+}
+
+.logoHeader {
     /* display: block;
     margin: auto; */
     width: 330px;
-    height: 90px;
 }
 
 .buttons {
