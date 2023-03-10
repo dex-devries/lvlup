@@ -41,12 +41,13 @@ body {
 
 .addButton, .viewButton {
     border-radius: 8px;
-    width: 40px;
+    width: 45px;
     height: 30px;
-    margin-right: 20px;
+    margin-right: 10px;
     float: left;
     background-color: rgb(94,94,94);
-    color: black;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
 }
 
 .layout {

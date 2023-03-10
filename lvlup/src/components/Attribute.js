@@ -10,8 +10,8 @@ const Attribute = (props) => {
         <img className="abilityImage" src={require(`../assets/${abilityType}.png`)} alt={abilityType}/>
         <h1 className="abilityHeader" style={{color: 'white'}}>{abilityType.toUpperCase()}</h1>
         <div className="buttons">
-                <button>Add</button>
-                <button>View</button>
+                <button className='addButton'>Add</button>
+                <button className='viewButton'>View</button>
         </div>
     </div>
     )
