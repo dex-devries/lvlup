@@ -7,8 +7,8 @@ const Attribute = (props) => {
 
     return (
     <div className={abilityType + ' '}>
-        <img src={`.../images/${abilityType}.png`} alt={abilityType}/>
-        <h1 className="abilityHeader">{abilityType.toUpperCase()}</h1>
+        <img src={require(`../assets/${abilityType}.png`)} alt={abilityType} style={{width:'40px'}}/>
+        {/* <h1 className="abilityHeader" style={{color: 'white'}}>{abilityType.toUpperCase()}</h1> */}
         <div className="buttons">
                 <button>Add</button>
                 <button>View</button>
