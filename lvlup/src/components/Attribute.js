@@ -7,6 +7,11 @@ const Attribute = (props) => {
 
     // sort data for specific ability
 
+    // handler for add button clicked (opens add menu)
+    const addClickHandler = () => {
+        props.addMenuOpen();
+    }
+
     return (
     <div className={abilityType}>
         <img className="abilityImage" src={require(`../assets/${abilityType}.png`)} alt={abilityType}/>
@@ -16,7 +21,7 @@ const Attribute = (props) => {
             <AttributeXP/>
         </div>
         <div className="buttons">
-                <button className='addButton'>Add</button>
+                <button className='addButton' onClick={addClickHandler}>Add</button>
                 <button className='viewButton'>View</button>
         </div>
     </div>
