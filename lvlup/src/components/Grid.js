@@ -13,7 +13,7 @@ const Grid = (props) => {
   };
 
   if (menuOpenAttribute) {
-    return <ActivityMenu attribute={menuOpenAttribute} />;
+    return <ActivityMenu attribute={menuOpenAttribute} menuClose={addButtonClicked}/>;
   }
 
   return (
