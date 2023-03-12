@@ -4,6 +4,8 @@ import ActivityMenu from "./ActivityMenu";
 import React, { useState } from "react";
 
 const Grid = (props) => {
+  let menu = <></>;
+
   // state here relies on the name of the attribute to open correct menu
   const [menuOpenAttribute, setMenuOpenAttribute] = useState(null);
 
@@ -13,20 +15,28 @@ const Grid = (props) => {
   };
 
   if (menuOpenAttribute) {
-    return <ActivityMenu attribute={menuOpenAttribute} menuClose={addButtonClicked}/>;
+    menu = (
+      <ActivityMenu
+        attribute={menuOpenAttribute}
+        menuClose={addButtonClicked}
+      />
+    );
   }
 
   return (
-    <div className="layout">
-      <Attribute type="agility" addMenuOpen={addButtonClicked} />
-      <Attribute type="intellect" addMenuOpen={addButtonClicked} />
-      <Attribute type="strength" addMenuOpen={addButtonClicked} />
-      <Attribute type="skill" addMenuOpen={addButtonClicked} />
-      <Attribute type="attack" addMenuOpen={addButtonClicked} />
-      <Attribute type="presence" addMenuOpen={addButtonClicked} />
-      <Attribute type="alchemy" addMenuOpen={addButtonClicked} />
-      <Attribute type="power" addMenuOpen={addButtonClicked} />
-    </div>
+    <>
+      {menu}
+      <div className="layout">
+        <Attribute type="agility" addMenuOpen={addButtonClicked} />
+        <Attribute type="intellect" addMenuOpen={addButtonClicked} />
+        <Attribute type="strength" addMenuOpen={addButtonClicked} />
+        <Attribute type="skill" addMenuOpen={addButtonClicked} />
+        <Attribute type="attack" addMenuOpen={addButtonClicked} />
+        <Attribute type="presence" addMenuOpen={addButtonClicked} />
+        <Attribute type="alchemy" addMenuOpen={addButtonClicked} />
+        <Attribute type="power" addMenuOpen={addButtonClicked} />
+      </div>
+    </>
   );
 
   //   <Attribute type='agility' data={props.data.agility}/>
