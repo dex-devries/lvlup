@@ -8,8 +8,8 @@ const Attribute = (props) => {
     // sort data for specific ability
 
     // handler for add button clicked (opens add menu)
-    const addClickHandler = () => {
-        props.addMenuOpen();
+    const addClickHandler = (e) => {
+        props.addMenuOpen(abilityType);
     }
 
     return (

@@ -5,7 +5,7 @@ const ActivityMenu = (props) => {
 
   return (
     <div className="activityMenu">
-      <h3>{props.attribute}</h3>
+      <h3>{props.attribute.toUpperCase()}</h3>
       <form>
         <div>
           <label>Activity</label>
