@@ -39,9 +39,23 @@ body {
     border: 1px solid white;
 }
 
+.menuLabel {
+    margin-bottom: 10px;
+}
+
 .menuInput {
     float: right;
     width: 65%;
+}
+
+.menuTime {
+    padding-left: 0px;
+}
+
+.menuTimeInput {
+    display: inline;
+    width: 20%;
+    height: 13px;
 }
 
 .abilityHeader {
