@@ -45,7 +45,7 @@ const Attribute = (props) => {
           />
         </button>
         <div className="badgeTitle">
-            {'ACQUIRING TARGET'}
+            {'TARGET ACQUIRED'}
         </div>
       </div>
     </div>

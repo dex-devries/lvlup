@@ -1,6 +1,18 @@
 import "./styles.css";
 
+import React, { useRef } from 'react';
+
 const ActivityMenu = (props) => {
+
+  // refs for all input fields
+  const activityInputRef = useRef();
+  const dateInputRef = useRef();
+  const durationHrInputRef = useRef();
+  const durationMinInputRef = useRef();
+  const durationSecInputRef = useRef();
+  const countInputRef = useRef();
+  const notesInputRef = useRef();
+
   // This whole code block just to style date correctly for dynamic max date :`(
   const date = new Date(Date.now());
   // console.log(date.getDay());
@@ -17,8 +29,22 @@ const ActivityMenu = (props) => {
   // console.log(today);
   // End spaghetti
 
-  // Needs logic for data
+  // Needs logic for data - this is submit form
   const addHandler = () => {
+    // build data object to pass up
+    const activity = {
+      attribute: props.attribute,
+      activity: activityInputRef.current.value,
+      date: dateInputRef.current.value,
+      duration: 
+        durationHrInputRef.current.value + ":" +
+        durationMinInputRef.current.value + ":" +
+        durationSecInputRef.current.value,
+      count: countInputRef.current.value,
+      notes: notesInputRef.current.value
+    }
+    console.log(activity);
+
     // here we pass null so no attribute is selected
     props.menuClose(null);
   };
@@ -36,14 +62,14 @@ const ActivityMenu = (props) => {
         alt={props.attribute}
       /> */}
       <h3>{props.attribute.toUpperCase()}</h3>
-      <form>
+      <form onSubmit={addHandler}>
         <div className="menuLabel">
           <label>Activity</label>
           <input
             className="menuInput"
             type="text"
-            defaultValue="Activity name"
-            onChange={null}
+            placeholder="Activity name"
+            ref={activityInputRef}
           />
         </div>
         <div className="menuLabel">
@@ -51,10 +77,10 @@ const ActivityMenu = (props) => {
           <input
             className="menuInput"
             type="date"
-            min="2001-01-01"
+            min="2022-01-01"
             max={today}
-            value={today}
-            onChange={null}
+            defaultValue={today}
+            ref={dateInputRef}
           />
         </div>
         <div className="menuLabel">
@@ -63,22 +89,28 @@ const ActivityMenu = (props) => {
             <input
               className="menuTimeInput"
               type="number"
-              value="00"
-              onChange={null}
+              placeholder="hr"
+              min="0"
+              max="23"
+              ref={durationHrInputRef}
             />
             :
             <input
               className="menuTimeInput"
               type="number"
-              value="00"
-              onChange={null}
+              placeholder="min"
+              min="0"
+              max="59"
+              ref={durationMinInputRef}
             />
             :
             <input
               className="menuTimeInput"
               type="number"
-              value="00"
-              onChange={null}
+              placeholder="sec"
+              min="0"
+              max="59"
+              ref={durationSecInputRef}
             />
           </div>
         </div>
@@ -86,9 +118,9 @@ const ActivityMenu = (props) => {
           <label>Count</label>
           <input
             className="menuInput"
-            type="text"
-            value="Count"
-            onChange={null}
+            type="number"
+            placeholder="Count"
+            ref={countInputRef}
           />
         </div>
         <div className="menuLabel">
@@ -96,19 +128,19 @@ const ActivityMenu = (props) => {
           <input
             className="menuInput"
             type="text"
-            value="Notes"
-            onChange={null}
+            placeholder="Notes"
+            ref={notesInputRef}
           />
         </div>
+        <div className="buttons">
+          <button type="submit" className="menuButton">
+            Add
+          </button>
+          <button className="menuButton" onClick={cancelHandler}>
+            Cancel
+          </button>
+        </div>
       </form>
-      <div className="buttons">
-        <button className="menuButton" onClick={addHandler}>
-          Add
-        </button>
-        <button className="menuButton" onClick={cancelHandler}>
-          Cancel
-        </button>
-      </div>
     </div>
   );
 };
