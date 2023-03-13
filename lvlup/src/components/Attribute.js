@@ -26,6 +26,9 @@ const Attribute = (props) => {
         <AttributeLevel />
         <AttributeXP />
       </div>
+      <div className="badge">
+        <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
+      </div>
       <div className="buttons">
         <button title='Add activity' className="addButton" onClick={addClickHandler}>
           <img
@@ -41,6 +44,9 @@ const Attribute = (props) => {
             alt="stats button"
           />
         </button>
+        <div className="badgeTitle">
+            {'ACQUIRING TARGET'}
+        </div>
       </div>
     </div>
   );

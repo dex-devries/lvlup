@@ -2,6 +2,30 @@ body {
     background-color: black;
 }
 
+.badge {
+    float: left;
+    width: 35%;
+    height: 60px;
+
+}
+
+.badgeImg {
+    margin-left: 15px;
+    width: 50px;
+    border: 1px solid ghostwhite;
+    border-radius: 10px;
+
+}
+
+.badgeTitle {
+    width: 75px;
+    margin-right: 7px;
+    text-align: center;
+    font-size: small;
+    float: right;
+    color: white;
+}
+
 .activityMenu {
     width: 300px;
     height: 300px;

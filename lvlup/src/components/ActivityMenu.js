@@ -10,6 +10,11 @@ const ActivityMenu = (props) => {
 
   return (
     <div className="activityMenu">
+      {/* <img
+        className="abilityImage"
+        src={require(`../assets/${props.attribute}.png`)}
+        alt={props.attribute}
+      /> */}
       <h3>{props.attribute.toUpperCase()}</h3>
       <form>
         <div>
