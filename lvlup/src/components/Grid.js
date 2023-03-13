@@ -21,11 +21,12 @@ const Grid = (props) => {
         menuClose={addButtonClicked}
       />
     );
+    return menu;
   }
 
   return (
     <>
-      {menu}
+      {/* {menu} */}
       <div className="layout">
         <Attribute type="agility" addMenuOpen={addButtonClicked} />
         <Attribute type="intellect" addMenuOpen={addButtonClicked} />
