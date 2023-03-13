@@ -125,12 +125,16 @@ const ActivityMenu = (props) => {
         </div>
         <div className="menuLabel">
           <label>Notes</label>
-          <input
-            className="menuInput"
+          <textarea rows="3" className="menuInput notesInput"
+            type="text"
+            placeholder="Notes"
+            ref={notesInputRef} />
+          {/* <input
+            className="menuInput notesInput"
             type="text"
             placeholder="Notes"
             ref={notesInputRef}
-          />
+          /> */}
         </div>
         <div className="buttons">
           <button type="submit" className="menuButton">
