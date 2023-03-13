@@ -137,6 +137,7 @@ body {
     height: 800px;
 
     margin: auto;
+    margin-left: 20px;
 
     color: white;
     font-size: 20px;
@@ -148,9 +149,15 @@ body {
       "attack presence" 17%
       "alchemy power" 17%
       / 49% 49%;
-    gap: 8px;
+    gap: 12px;
   }
-  
+
+  /* @media screen and (max-width: 400px) {
+    .layout {
+        margin-left: 15px;
+    }
+  }
+   */
   .agility { grid-area: agility; }
   .intellect { grid-area: intellect; }
   .strength { grid-area: strength; }
