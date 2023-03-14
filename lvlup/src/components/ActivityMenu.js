@@ -33,6 +33,7 @@ const ActivityMenu = (props) => {
   const addHandler = () => {
     // build data object to pass up
     const activity = {
+      id: dateInputRef.current.value + '-' + Math.floor((Math.random() * 10000000)).toString(),
       attribute: props.attribute,
       activity: activityInputRef.current.value,
       date: dateInputRef.current.value,
