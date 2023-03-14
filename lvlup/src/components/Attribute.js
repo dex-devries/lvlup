@@ -3,7 +3,12 @@ import AttributeLevel from "./AttributeLevel";
 import AttributeXP from "./AttributeXP";
 
 const Attribute = (props) => {
+  // console.log(props);
+  const xp = props.stats.xp;
+  const level = props.stats.level;
   const abilityType = props.type;
+  // const xp = props.stats.xp;
+  // const level = props.stats.level;
 
   // sort data for specific ability
 
@@ -23,8 +28,8 @@ const Attribute = (props) => {
         {abilityType.toUpperCase()}
       </h1>
       <div className="attributeStats">
-        <AttributeLevel />
-        <AttributeXP />
+        <AttributeLevel level={level}/>
+        <AttributeXP xp={xp}/>
       </div>
       <div className="badge">
         <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
