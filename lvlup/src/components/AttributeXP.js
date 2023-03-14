@@ -1,7 +1,7 @@
 const AttributeXP = (props) => {
   return (
     <div className="attributeXP">
-      XP: <div className='attributeData'>{999999}</div>
+      XP: <div className='attributeData'>{props.xp}</div>
     </div>
   );
 };

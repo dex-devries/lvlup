@@ -1,7 +1,7 @@
 const AttributeLevel = (props) => {
   return (
     <div className="attributeLevel">
-      Level: <div className='attributeData'>{99}</div>
+      Level: <div className='attributeData'>{props.level}</div>
     </div>
   );
 };
