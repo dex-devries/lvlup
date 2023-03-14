@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header />
-      <Grid data />
+      <Grid stats={INIT_STATS_OBJ} />
     </>
   );
 }
