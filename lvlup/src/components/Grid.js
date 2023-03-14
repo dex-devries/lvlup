@@ -6,6 +6,8 @@ import React, { useState } from "react";
 const Grid = (props) => {
   let menu = <></>;
 
+  // console.log(props.stats);
+
   // state here relies on the name of the attribute to open correct menu
   const [menuOpenAttribute, setMenuOpenAttribute] = useState(null);
 
@@ -28,14 +30,14 @@ const Grid = (props) => {
     <>
       {/* {menu} */}
       <div className="layout">
-        <Attribute type="agility" addMenuOpen={addButtonClicked} />
-        <Attribute type="intellect" addMenuOpen={addButtonClicked} />
-        <Attribute type="strength" addMenuOpen={addButtonClicked} />
-        <Attribute type="skill" addMenuOpen={addButtonClicked} />
-        <Attribute type="attack" addMenuOpen={addButtonClicked} />
-        <Attribute type="presence" addMenuOpen={addButtonClicked} />
-        <Attribute type="alchemy" addMenuOpen={addButtonClicked} />
-        <Attribute type="power" addMenuOpen={addButtonClicked} />
+        <Attribute type="agility" addMenuOpen={addButtonClicked} stats={props.stats.agility}/>
+        <Attribute type="intellect" addMenuOpen={addButtonClicked} stats={props.stats.intellect}/>
+        <Attribute type="strength" addMenuOpen={addButtonClicked} stats={props.stats.strength}/>
+        <Attribute type="skill" addMenuOpen={addButtonClicked} stats={props.stats.skill}/>
+        <Attribute type="attack" addMenuOpen={addButtonClicked} stats={props.stats.attack}/>
+        <Attribute type="presence" addMenuOpen={addButtonClicked} stats={props.stats.presence}/>
+        <Attribute type="alchemy" addMenuOpen={addButtonClicked} stats={props.stats.alchemy}/>
+        <Attribute type="power" addMenuOpen={addButtonClicked} stats={props.stats.power}/>
       </div>
     </>
   );
