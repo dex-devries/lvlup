@@ -182,7 +182,7 @@ const activities = [
   {
     id: "2022-03-10-234567",
     date: "2022-03-10",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Read 'The Lean Startup' book",
     duration: "1:30:00",
     count: 1,
@@ -191,7 +191,7 @@ const activities = [
   {
     id: "2022-04-23-456789",
     date: "2022-04-23",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Practice Spanish vocabulary",
     duration: "0:45:00",
     count: 1,
@@ -200,7 +200,7 @@ const activities = [
   {
     id: "2022-05-05-345678",
     date: "2022-05-05",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Watch 'The Social Dilemma' documentary",
     duration: "1:30:00",
     count: 1,
@@ -209,7 +209,7 @@ const activities = [
   {
     id: "2022-06-15-567890",
     date: "2022-06-15",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Complete 'Machine Learning' course",
     duration: "2:00:00",
     count: 1,
@@ -218,7 +218,7 @@ const activities = [
   {
     id: "2022-07-11-789012",
     date: "2022-07-11",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Read 'Thinking, Fast and Slow' book",
     duration: "1:00:00",
     count: 1,
@@ -227,7 +227,7 @@ const activities = [
   {
     id: "2022-08-03-901234",
     date: "2022-08-03",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Practice coding in Python",
     duration: "1:30:00",
     count: 1,
@@ -236,7 +236,7 @@ const activities = [
   {
     id: "2022-09-22-123456",
     date: "2022-09-22",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Watch 'The Great Hack' documentary",
     duration: "1:30:00",
     count: 1,
@@ -245,7 +245,7 @@ const activities = [
   {
     id: "2022-10-07-345678",
     date: "2022-10-07",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Complete 'Introduction to Statistics' course",
     duration: "2:30:00",
     count: 1,
@@ -254,7 +254,7 @@ const activities = [
   {
     id: "2022-11-17-567890",
     date: "2022-11-17",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Read 'Atomic Habits' book",
     duration: "1:15:00",
     count: 1,
@@ -263,7 +263,7 @@ const activities = [
   {
     id: "2022-12-28-789012",
     date: "2022-12-28",
-    attribute: "intelligence",
+    attribute: "intellect",
     activity: "Practice coding in Java",
     duration: "2:00:00",
     count: 1,

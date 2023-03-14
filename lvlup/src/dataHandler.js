@@ -1,7 +1,7 @@
 function parseData(dataSet) {
     const statObject = {
         agility: {level: 0, xp: 0},
-        intelligence: {level: 0, xp: 0},
+        intellect: {level: 0, xp: 0},
         strength: {level: 0, xp: 0},
         skill: {level: 0, xp: 0},
         attack: {level: 0, xp: 0},
@@ -23,7 +23,7 @@ function parseData(dataSet) {
         duration = (Number(duration[0]) * 3600) + (Number(duration[1]) * 60) + Number(duration[2]);
         // count
         let count = activity.count;
-        // calculate xp and compares - formulas for xp
+        // calculate xp and compares - formulas for xp currently 1xp/sec and 2xp/count
         let durationXP = Math.floor(duration / 15);
         let countXP = count * 2;
         xp = durationXP >= countXP ? durationXP : countXP;       
