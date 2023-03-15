@@ -1,6 +1,7 @@
 import "./styles.css";
 import AttributeLevel from "./AttributeLevel";
 import AttributeXP from "./AttributeXP";
+import Badge from "./Badge";
 
 const Attribute = (props) => {
   // console.log(props);
@@ -31,9 +32,10 @@ const Attribute = (props) => {
         <AttributeLevel level={level}/>
         <AttributeXP xp={xp}/>
       </div>
-      <div className="badge">
+      {/* <div className="badge">
         <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
-      </div>
+      </div> */}
+      <Badge level={level} attribute={abilityType} />
       <div className="buttons">
         <button title='Add activity' className="addButton" onClick={addClickHandler}>
           <img
