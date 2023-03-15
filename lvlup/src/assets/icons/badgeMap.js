@@ -1,6 +1,5 @@
-const badges = [
-  {
-    attribute: "agility",
+const badges = {
+agility: {
     3: ["agility/run.png", "olympic potential"],
     6: ["agility/horizon-road.png", "road warrior"],
     10: ["agility/skipping-rope.png", "never tired"],
@@ -10,10 +9,9 @@ const badges = [
     30: ["agility/slicing-arrow.png", "elite"],
     40: ["agility/sprint.png", "ninja"],
     50: ["agility/run.png", "operator"],
-    60: ["agility/centurion-helmet.png", "spartan"]
+    60: ["agility/centurion-helmet.png", "spartan"] 
   },
-  {
-    attribute: "intellect",
+intellect: {
     3: ["intellect/binoculars.png", "far sighted"],
     6: ["intellect/spectacles.png", "the watcher"],
     10: ["intellect/brass-eye.png", "new eyes"],
@@ -27,8 +25,7 @@ const badges = [
     80: ["intellect/all-seeing-eye.png", "singularity"],
     100: ["intellect/suspicious.png", "all knowing"],
   },
-  {
-    attribute: "strength",
+strength: {
     3: ["strength/i-beam.png", "malleable"],
     6: ["strength/weight-lifting-up.png", "perfect form"],
     10: ["strength/biceps.png", "gun show"],
@@ -39,8 +36,7 @@ const badges = [
     50: ["strength/crested-helmet.png", "centurion"],
     60: ["strength/mighty-force.png", ""],
   },
-  {
-    attribute: "skill",
+skill: {
     5: ["skill/anvil.png", "novice"],
     10: ["skill/watch.png", "hours of practice"],
     15: ["skill/brain-dump.png", "muscle memory"],
@@ -50,8 +46,7 @@ const badges = [
     60: ["skill/time-trap.png", "countless hours"],
     100: ["skill/tired-eye.png", "mastery"]
   },
-  {
-    attribute: "attack",
+attack: {
     3: [],
     6: [],
     10: [],
@@ -65,8 +60,7 @@ const badges = [
     60: [],
     100: []
   },
-  {
-    attribute: "presence",
+presence: {
     5: [],
     10: [],
     15: [],
@@ -76,8 +70,7 @@ const badges = [
     45: [],
     70: []
   },
-  {
-    attribute: "alchemy",
+alchemy: {
     3: [],
     6: [],
     10: [],
@@ -91,8 +84,7 @@ const badges = [
     60: [],
     100: []
   },
-  {
-    attribute: "power",
+power: {
     3: [],
     6: [],
     10: [],
@@ -106,6 +98,6 @@ const badges = [
     60: [],
     100: []
   }
-];
+};
 
 export { badges };
