@@ -1,6 +1,8 @@
+
+import './styles.css';
+
 const BadgeTitle = (props) => {
-    
-    return ( <></> );
-}
- 
+  return <div className="badgeTitle">{props.title.toUpperCase()}</div>;
+};
+
 export default BadgeTitle;
