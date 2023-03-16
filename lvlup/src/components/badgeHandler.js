@@ -20,10 +20,11 @@ const badgeHandler = (level, attribute) => {
   // console.log(images);
   // most recent (highest level) badge from the end of collectedB array
   // [0] index at the end gets path, [1] would get badge name
-  let imgSrc = collectedBadges[collectedBadges.length - 1][0];
+  const badgeImgSrc = collectedBadges[collectedBadges.length - 1][0];
+  const badgeTitle = collectedBadges[collectedBadges.length - 1][1];
   //imgSrc = collectedBadges[0][0];
 
-  return images(imgSrc);
+  return [images(badgeImgSrc), badgeTitle];
 };
 
 export { badgeHandler };

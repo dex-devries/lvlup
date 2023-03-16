@@ -2,6 +2,9 @@ import "./styles.css";
 import AttributeLevel from "./AttributeLevel";
 import AttributeXP from "./AttributeXP";
 import Badge from "./Badge";
+import BadgeTitle from "./BadgeTitle";
+import { badgeHandler } from "./badgeHandler";
+
 
 const Attribute = (props) => {
   // console.log(props);
@@ -17,6 +20,12 @@ const Attribute = (props) => {
   const addClickHandler = (e) => {
     props.addMenuOpen(abilityType);
   };
+
+  // handle badge/award logic
+  // badgeHandler returns [badgeImg, badgeTitle]
+  const badgeSrc = badgeHandler(level, abilityType);
+  const badgeImg = badgeSrc[0];
+  const badgeTitle = badgeSrc[1];
 
   return (
     <div className={abilityType}>
@@ -35,7 +44,7 @@ const Attribute = (props) => {
       {/* <div className="badge">
         <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
       </div> */}
-      <Badge level={level} attribute={abilityType} />
+      <Badge image={badgeImg}/>
       <div className="buttons">
         <button title='Add activity' className="addButton" onClick={addClickHandler}>
           <img
@@ -51,9 +60,7 @@ const Attribute = (props) => {
             alt="stats button"
           />
         </button>
-        <div className="badgeTitle">
-            {'TARGET ACQUIRED'}
-        </div>
+        <BadgeTitle title={badgeTitle} />
       </div>
     </div>
   );
