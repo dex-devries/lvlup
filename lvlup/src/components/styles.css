@@ -10,8 +10,10 @@ body {
 }
 
 .badgeImg {
-    margin-left: 15px;
-    width: 50px;
+    margin-right: 7px;
+    margin-top: 5px;
+    float: right;
+    width: 40px;
     border: 1px solid ghostwhite;
     border-radius: 10px;
 
@@ -20,6 +22,7 @@ body {
 .badgeTitle {
     width: 75px;
     margin-right: 7px;
+    /* margin-bottom: 4px; */
     text-align: center;
     font-size: small;
     float: right;
@@ -99,6 +102,11 @@ textarea {
 .attributeLevel, .attributeXP {
     font-size:large;
 }
+
+.attributeLevel {
+    margin-top: 3px;
+}
+
 .attributeData {
     float: right;
     color: goldenrod;
