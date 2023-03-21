@@ -72,6 +72,7 @@ const ActivityMenu = (props) => {
             type="text"
             placeholder="Activity name"
             ref={activityInputRef}
+            required
           />
         </div>
         <div className="menuLabel">
