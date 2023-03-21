@@ -31,7 +31,7 @@ body {
 
 .activityMenu {
     width: 300px;
-    height: 330px;
+    height: 350px;
     margin-left: 55px;
     margin-bottom: 20px;
     background-color: rgb(42, 41, 41);
@@ -40,6 +40,10 @@ body {
     padding-left: 30px;
     border-radius: 15px;
     border: 1px solid white;
+}
+
+.menuHeader {
+    margin-bottom: 40px;
 }
 
 .menuLabel {
@@ -81,6 +85,16 @@ textarea {
 .abilityImage {
     float:left;
     width:40px;
+}
+
+.menuImage {
+    float:left;
+    width:40px;
+    margin-right:57px;
+}
+
+.menuAttrHead {
+    padding-top: 7px;
 }
 
 .header {

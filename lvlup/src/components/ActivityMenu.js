@@ -1,9 +1,8 @@
 import "./styles.css";
 
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 
 const ActivityMenu = (props) => {
-
   // refs for all input fields
   const activityInputRef = useRef();
   const dateInputRef = useRef();
@@ -33,17 +32,22 @@ const ActivityMenu = (props) => {
   const addHandler = () => {
     // build data object to pass up
     const activity = {
-      id: dateInputRef.current.value + '-' + Math.floor((Math.random() * 10000000)).toString(),
+      id:
+        dateInputRef.current.value +
+        "-" +
+        Math.floor(Math.random() * 10000000).toString(),
       attribute: props.attribute,
       activity: activityInputRef.current.value,
       date: dateInputRef.current.value,
-      duration: 
-        durationHrInputRef.current.value + ":" +
-        durationMinInputRef.current.value + ":" +
+      duration:
+        durationHrInputRef.current.value +
+        ":" +
+        durationMinInputRef.current.value +
+        ":" +
         durationSecInputRef.current.value,
       count: countInputRef.current.value,
-      notes: notesInputRef.current.value
-    }
+      notes: notesInputRef.current.value,
+    };
     // console.log(activity);
 
     // here we pass null so no attribute is selected
@@ -58,12 +62,14 @@ const ActivityMenu = (props) => {
 
   return (
     <div className="activityMenu">
-      {/* <img
-        className="abilityImage"
-        src={require(`../assets/${props.attribute}.png`)}
-        alt={props.attribute}
-      /> */}
-      <h3>{props.attribute.toUpperCase()}</h3>
+      <div className="menuHeader">
+        <img
+          className="menuImage"
+          src={require(`../assets/no-bg/${props.attribute}.png`)}
+          alt={props.attribute}
+        />
+        <h3 className="menuAttrHead">{props.attribute.toUpperCase()}</h3>
+      </div>
       <form onSubmit={addHandler}>
         <div className="menuLabel">
           <label>Activity</label>
@@ -128,10 +134,13 @@ const ActivityMenu = (props) => {
         </div>
         <div className="menuLabel">
           <label>Notes</label>
-          <textarea rows="3" className="menuInput notesInput"
+          <textarea
+            rows="3"
+            className="menuInput notesInput"
             type="text"
             placeholder="Notes"
-            ref={notesInputRef} />
+            ref={notesInputRef}
+          />
           {/* <input
             className="menuInput notesInput"
             type="text"
