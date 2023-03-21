@@ -2,9 +2,11 @@ import Grid from "./components/Grid";
 import Header from "./components/Header";
 import { activities } from "./assets/testData/demoData";
 import { parseData } from "./dataHandler";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const TEST_DATA = activities;
+
+const LOCAL_STORAGE_KEY = "user.stats";
 
 function App() {
   let dynamicStatsObj = parseData(TEST_DATA);
@@ -14,6 +16,22 @@ function App() {
 
   // state for stats
   const [stats, setStats] = useState(dynamicStatsObj);
+
+  // runs only once
+  useEffect(() => {
+    const storedStats = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (localStorage.getItem(LOCAL_STORAGE_KEY)) setStats(storedStats);
+  }, []);
+
+  // runs whenever stats is modified (state change)
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(stats));
+  }, [stats]);
+
+  // useEffect(() => {
+  //   const storedStats = localStorage.getItem(LOCAL_STORAGE_KEY);
+  //   setStats(storedStats);
+  // }, [])
 
   // function to pass to Grid for data retreival
   const addUserData = (newData) => {
@@ -26,10 +44,11 @@ function App() {
 
     // update dynamicStatsObject with new scores - only updates one attribute and power, saves iterating through all
     dynamicStatsObj[newData.attribute]["xp"] += stats[newData.attribute]["xp"];
-    dynamicStatsObj[newData.attribute]["level"] += ( stats[newData.attribute]["level"] - 1 );
+    dynamicStatsObj[newData.attribute]["level"] +=
+      stats[newData.attribute]["level"] - 1;
     // update power
     dynamicStatsObj["power"]["xp"] += stats["power"]["xp"];
-    dynamicStatsObj["power"]["level"] += ( stats["power"]["level"] - 1 );
+    dynamicStatsObj["power"]["level"] += stats["power"]["level"] - 1;
 
     console.log("Stats object after add:");
     console.log(dynamicStatsObj);
@@ -42,7 +61,7 @@ function App() {
   return (
     <>
       <Header />
-      <Grid stats={stats} dataHandler={addUserData}/>
+      <Grid stats={stats} dataHandler={addUserData} />
     </>
   );
 }
