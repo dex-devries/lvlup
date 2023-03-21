@@ -14,12 +14,15 @@ const Attribute = (props) => {
   // const xp = props.stats.xp;
   // const level = props.stats.level;
 
-  // sort data for specific ability
-
   // handler for add button clicked (opens add menu)
   const addClickHandler = (e) => {
     props.addMenuOpen(abilityType);
   };
+
+  // handler for stats button clicked
+  const statsClickHandler = () => {
+    props.statsWindowOpen(abilityType);
+  }
 
   // handle badge/award logic
   // badgeHandler returns [badgeImg, badgeTitle]
@@ -64,7 +67,7 @@ const Attribute = (props) => {
           />
         </button> */}
         {abilityType === "power" ? <div/> : addButton}
-        <button title='View stats' className="statsButton">
+        <button title='View stats' className="statsButton" onClick={statsClickHandler}>
           <img
             className="statsThumb"
             src={require("../assets/stats-neg-removebg.png")}

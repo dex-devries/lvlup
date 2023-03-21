@@ -8,16 +8,22 @@ const Grid = (props) => {
 
   // console.log(props.stats);
 
+  // state for activtyMenu
   // state here relies on the name of the attribute to open correct menu
   const [menuOpenAttribute, setMenuOpenAttribute] = useState(null);
+  // state for statsWindow - same logic as menuOpenAttr... name of attr loads correct stats
+  const [statsWindowAttribute, setStatsWindowAttribute] = useState(null);
 
-  // function to pass to Attributes
+  // function for add button to pass to Attributes (opens acitivty menu)
   const addButtonClicked = (attribute) => {
     setMenuOpenAttribute(attribute);
   };
+  // function for stats button to pass to Attributes (opens stats window)
+  const statsButtonClicked = (attribute) => {
+    setStatsWindowAttribute(attribute);
+  };
 
-  // function to retrieve data
-
+  // add menu open
   if (menuOpenAttribute) {
     menu = (
       <ActivityMenu
@@ -29,18 +35,28 @@ const Grid = (props) => {
     return menu;
   }
 
+  // stats menu open
+  if (statsWindowAttribute) {
+    menu = (
+      <div>
+        Stats Menu
+      </div>
+    );
+    return menu;
+  }
+
   return (
     <>
       {/* {menu} */}
       <div className="layout">
-        <Attribute type="agility" addMenuOpen={addButtonClicked} stats={props.stats.agility}/>
-        <Attribute type="intellect" addMenuOpen={addButtonClicked} stats={props.stats.intellect}/>
-        <Attribute type="strength" addMenuOpen={addButtonClicked} stats={props.stats.strength}/>
-        <Attribute type="skill" addMenuOpen={addButtonClicked} stats={props.stats.skill}/>
-        <Attribute type="attack" addMenuOpen={addButtonClicked} stats={props.stats.attack}/>
-        <Attribute type="presence" addMenuOpen={addButtonClicked} stats={props.stats.presence}/>
-        <Attribute type="alchemy" addMenuOpen={addButtonClicked} stats={props.stats.alchemy}/>
-        <Attribute type="power" addMenuOpen={addButtonClicked} stats={props.stats.power}/>
+        <Attribute type="agility" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.agility}/>
+        <Attribute type="intellect" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.intellect}/>
+        <Attribute type="strength" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.strength}/>
+        <Attribute type="skill" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.skill}/>
+        <Attribute type="attack" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.attack}/>
+        <Attribute type="presence" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.presence}/>
+        <Attribute type="alchemy" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.alchemy}/>
+        <Attribute type="power" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.power}/>
       </div>
     </>
   );
