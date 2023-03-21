@@ -16,11 +16,14 @@ const Grid = (props) => {
     setMenuOpenAttribute(attribute);
   };
 
+  // function to retrieve data
+
   if (menuOpenAttribute) {
     menu = (
       <ActivityMenu
         attribute={menuOpenAttribute}
         menuClose={addButtonClicked}
+        dataHandler={props.dataHandler}
       />
     );
     return menu;
