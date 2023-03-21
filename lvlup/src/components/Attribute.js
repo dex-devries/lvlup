@@ -31,7 +31,7 @@ const Attribute = (props) => {
     <div className={abilityType}>
       <img
         className="abilityImage"
-        src={require(`../assets/${abilityType}.png`)}
+        src={require(`../assets/no-bg/${abilityType}.png`)}
         alt={abilityType}
       />
       <h1 className="abilityHeader" style={{ color: "white" }}>
