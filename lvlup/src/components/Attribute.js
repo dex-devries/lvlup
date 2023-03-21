@@ -27,6 +27,16 @@ const Attribute = (props) => {
   const badgeImg = badgeSrc[0];
   const badgeTitle = badgeSrc[1];
 
+  // this logic creates the JSX for buttons (different for power attr)
+  const addButton = <button title='Add activity' className="addButton" onClick={addClickHandler}>
+  <img
+    className="addThumb"
+    src={require("../assets/add-sm.png")}
+    alt="add button"
+  />
+  </button>;
+
+
   return (
     <div className={abilityType}>
       <img
@@ -46,13 +56,14 @@ const Attribute = (props) => {
       </div> */}
       <Badge image={badgeImg}/>
       <div className="buttons">
-        <button title='Add activity' className="addButton" onClick={addClickHandler}>
+        {/* <button title='Add activity' className="addButton" onClick={addClickHandler}>
           <img
             className="addThumb"
             src={require("../assets/add-sm.png")}
             alt="add button"
           />
-        </button>
+        </button> */}
+        {abilityType === "power" ? <div/> : addButton}
         <button title='View stats' className="statsButton">
           <img
             className="statsThumb"
