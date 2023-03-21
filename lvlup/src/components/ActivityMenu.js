@@ -44,9 +44,10 @@ const ActivityMenu = (props) => {
       count: countInputRef.current.value,
       notes: notesInputRef.current.value
     }
-    console.log(activity);
+    // console.log(activity);
 
     // here we pass null so no attribute is selected
+    props.dataHandler(activity);
     props.menuClose(null);
   };
 
