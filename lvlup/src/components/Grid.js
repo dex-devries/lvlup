@@ -1,6 +1,7 @@
 // import './style.module.css';
 import Attribute from "./Attribute";
 import ActivityMenu from "./ActivityMenu";
+import StatsWindow from "./StatsWindow";
 import React, { useState } from "react";
 
 const Grid = (props) => {
@@ -35,13 +36,9 @@ const Grid = (props) => {
     return menu;
   }
 
-  // stats menu open
+  // stats window open
   if (statsWindowAttribute) {
-    menu = (
-      <div>
-        Stats Menu
-      </div>
-    );
+    menu = <StatsWindow close={statsButtonClicked} attribute={statsWindowAttribute}/>;
     return menu;
   }
 
@@ -49,14 +46,54 @@ const Grid = (props) => {
     <>
       {/* {menu} */}
       <div className="layout">
-        <Attribute type="agility" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.agility}/>
-        <Attribute type="intellect" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.intellect}/>
-        <Attribute type="strength" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.strength}/>
-        <Attribute type="skill" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.skill}/>
-        <Attribute type="attack" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.attack}/>
-        <Attribute type="presence" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.presence}/>
-        <Attribute type="alchemy" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.alchemy}/>
-        <Attribute type="power" addMenuOpen={addButtonClicked} statsWindowOpen={statsButtonClicked} stats={props.stats.power}/>
+        <Attribute
+          type="agility"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.agility}
+        />
+        <Attribute
+          type="intellect"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.intellect}
+        />
+        <Attribute
+          type="strength"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.strength}
+        />
+        <Attribute
+          type="skill"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.skill}
+        />
+        <Attribute
+          type="attack"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.attack}
+        />
+        <Attribute
+          type="presence"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.presence}
+        />
+        <Attribute
+          type="alchemy"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.alchemy}
+        />
+        <Attribute
+          type="power"
+          addMenuOpen={addButtonClicked}
+          statsWindowOpen={statsButtonClicked}
+          stats={props.stats.power}
+        />
       </div>
     </>
   );
