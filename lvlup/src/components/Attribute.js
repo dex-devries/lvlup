@@ -58,7 +58,7 @@ const Attribute = (props) => {
         <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
       </div> */}
       <Badge image={badgeImg}/>
-      <div className="buttons">
+      <div className="attrFoot">
         {/* <button title='Add activity' className="addButton" onClick={addClickHandler}>
           <img
             className="addThumb"
