@@ -69,13 +69,29 @@ const ActivityMenu = (props) => {
     }
   };
 
-  // increment -> 30 for seconds, 1 for minute, 1 for hour
+  // increment -> 15 for seconds, 60 for minute, 3600 for hour
   const durationIncrementHandler = (increment) => {
-    // conditional to not allow negative count
-    if (Number(countInputRef.current.value) > 0 || increment === 1) {
-      const value = Number(countInputRef.current.value) + increment;
-      countInputRef.current.value = value.toString();
-    }
+    // calculate duration in seconds
+    let duration = Number(durationHrInputRef.current.value) * 3600 +
+    Number(durationMinInputRef.current.value) * 60 +
+    Number(durationSecInputRef.current.value);
+    // console.log(duration);
+
+    duration += increment;
+
+    // find hrs mins sec from seconds
+    const hours = Math.floor(duration / 3600);
+    const mins = Math.floor( (duration - (hours * 3600)) / 60 );
+    const secs = duration - (hours * 3600) - (mins * 60);
+
+    // console.log(hours);
+    // console.log(mins);
+    // console.log(secs);
+
+    durationHrInputRef.current.value = hours.toString();
+    durationMinInputRef.current.value = mins.toString();
+    durationSecInputRef.current.value = secs.toString();
+
   };
 
   return (
@@ -110,7 +126,7 @@ const ActivityMenu = (props) => {
             ref={dateInputRef}
           />
         </div>
-        <div className="menuLabel">
+        <div className="durMenuLabel">
           <label>Duration</label>
           <div className="menuTime">
             <div className="durationBlock">
@@ -118,7 +134,7 @@ const ActivityMenu = (props) => {
                 className="plusButtonSm"
                 src={require("../assets/no-bg/plus-nobg-theme.png")}
                 alt="count increment button"
-                onClick={() => countIncrementHandler(1)}
+                onClick={() => durationIncrementHandler(3600)}
               />
               <input
                 className="menuTimeInput"
@@ -127,15 +143,16 @@ const ActivityMenu = (props) => {
                 min="0"
                 max="23"
                 ref={durationHrInputRef}
+                onBlur={() => durationIncrementHandler(0)}
               />
             </div>
-            :
+            
             <div className="durationBlock">
               <img
                 className="plusButtonSm"
                 src={require("../assets/no-bg/plus-nobg-theme.png")}
                 alt="count increment button"
-                onClick={() => countIncrementHandler(1)}
+                onClick={() => durationIncrementHandler(60)}
               />
               <input
                 className="menuTimeInput"
@@ -144,15 +161,16 @@ const ActivityMenu = (props) => {
                 min="0"
                 max="59"
                 ref={durationMinInputRef}
+                onBlur={() => durationIncrementHandler(0)}
               />
             </div>
-            :
+            
             <div className="durationBlock">
               <img
                 className="plusButtonSm"
                 src={require("../assets/no-bg/plus-nobg-theme.png")}
                 alt="count increment button"
-                onClick={() => countIncrementHandler(1)}
+                onClick={() => durationIncrementHandler(15)}
               />
               <input
                 className="menuTimeInput"
@@ -161,6 +179,7 @@ const ActivityMenu = (props) => {
                 min="0"
                 max="59"
                 ref={durationSecInputRef}
+                onBlur={() => durationIncrementHandler(0)}
               />
             </div>
           </div>
