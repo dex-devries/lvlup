@@ -60,6 +60,15 @@ const ActivityMenu = (props) => {
     props.menuClose(null);
   };
 
+  // increment -> 1 or -1
+  const countIncrementHandler = (increment) => {
+    // conditional to not allow negative count
+    if (Number(countInputRef.current.value) > 0 || increment === 1) {
+      const value = Number(countInputRef.current.value) + increment;
+      countInputRef.current.value = value.toString();
+    }
+  };
+
   return (
     <div className="activityMenu">
       <div className="menuHeader">
@@ -130,11 +139,12 @@ const ActivityMenu = (props) => {
               className="plusButton"
               src={require("../assets/no-bg/plus-nobg-theme.png")}
               alt="count increment button"
+              onClick={() => countIncrementHandler(1)}
             />
             <input
               className="countInput"
               type="number"
-              min='1'
+              min="1"
               placeholder="Count"
               ref={countInputRef}
             />
@@ -142,6 +152,7 @@ const ActivityMenu = (props) => {
               className="minusButton"
               src={require("../assets/no-bg/minus-nobg-theme.png")}
               alt="count decrement button"
+              onClick={() => countIncrementHandler(-1)}
             />
           </div>
         </div>
