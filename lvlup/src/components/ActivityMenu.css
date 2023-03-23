@@ -169,9 +169,5 @@ textarea {
     background-color: rgb(94,94,94);
     color: rgb(0, 0, 0);
     font-weight: 600;
-}
-
-input {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-    /* box-shadow: rgb(3, 0, 89) -3px -3px -6px 0px inset, rgba(2, 0, 20, 0.5) 3px 3px -6px -1px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 8px;
 }
