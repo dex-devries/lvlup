@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./ActivityMenu.css";
 
 import React, { useRef } from "react";
 

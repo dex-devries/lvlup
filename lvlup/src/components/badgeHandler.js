@@ -1,5 +1,4 @@
 import { badges } from "../assets/icons/badgeMap";
-import "./styles.css";
 
 const badgeHandler = (level, attribute) => {
   const images = require.context("../assets/icons/badges", true);

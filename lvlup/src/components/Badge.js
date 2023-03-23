@@ -1,5 +1,5 @@
 
-import "./styles.css";
+import "./Badge.css";
 
 const Badge = (props) => {
 

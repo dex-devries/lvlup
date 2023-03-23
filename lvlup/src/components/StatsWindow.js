@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./StatsWindow.css";
 
 const StatsWindow = (props) => {
     const cancelHandler = () => {

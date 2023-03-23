@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./Attribute.css";
 import AttributeLevel from "./AttributeLevel";
 import AttributeXP from "./AttributeXP";
 import Badge from "./Badge";
