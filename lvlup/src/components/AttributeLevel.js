@@ -1,3 +1,5 @@
+import './Attribute.css';
+
 const AttributeLevel = (props) => {
   return (
     <div className="attributeLevel">
