@@ -125,12 +125,25 @@ const ActivityMenu = (props) => {
         </div>
         <div className="menuLabel">
           <label>Count</label>
-          <input
-            className="menuInput"
-            type="number"
-            placeholder="Count"
-            ref={countInputRef}
-          />
+          <div className="countInputDiv">
+            <img
+              className="plusButton"
+              src={require("../assets/no-bg/plus-nobg-theme.png")}
+              alt="count increment button"
+            />
+            <input
+              className="countInput"
+              type="number"
+              min='1'
+              placeholder="Count"
+              ref={countInputRef}
+            />
+            <img
+              className="minusButton"
+              src={require("../assets/no-bg/minus-nobg-theme.png")}
+              alt="count decrement button"
+            />
+          </div>
         </div>
         <div className="menuLabel">
           <label>Notes</label>

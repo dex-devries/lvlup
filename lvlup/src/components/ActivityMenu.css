@@ -1,3 +1,14 @@
+/* Disable increment buttons on number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
 .activityMenu {
     width: 320px;
     height: 410px;
@@ -9,6 +20,20 @@
     padding-left: 30px;
     border-radius: 15px;
     border: 1px solid rgb(87, 87, 87);
+}
+
+.minusButton {
+    float: right;
+}
+
+.plusButton {
+    float: left;
+    margin-right: 3px;
+}
+
+.plusButton, .minusButton {
+    width: 20px;
+    padding: 5px;
 }
 
 .menuHeader {
@@ -28,6 +53,25 @@
     height: 24px;
     border-radius: 5px;
     border: 1px solid  rgb(87, 87, 87);
+    background-color: rgb(2, 0, 20);
+    color:rgb(181, 155, 53);
+}
+
+.countInputDiv {
+    float: right;
+    margin-right: 75px;
+    width: 36%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid  rgb(87, 87, 87);
+    background-color: rgb(2, 0, 20);
+}
+.countInput {
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    height: 22px;
+    border: none;
     background-color: rgb(2, 0, 20);
     color:rgb(181, 155, 53);
 }
