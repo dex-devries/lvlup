@@ -1,0 +1,86 @@
+.activityMenu {
+    width: 320px;
+    height: 410px;
+    margin-left: 44px;
+    margin-bottom: 20px;
+    background-color: rgb(42, 41, 41);
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 15px;
+    border: 1px solid rgb(87, 87, 87);
+}
+
+.menuHeader {
+    margin-bottom: 40px;
+}
+
+.menuLabel {
+    margin-bottom: 20px;
+    color:rgb(183, 146, 177);
+    
+}
+
+.menuInput {
+    float: right;
+    margin-right: 24px;
+    width: 65%;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid  rgb(87, 87, 87);
+    background-color: rgb(2, 0, 20);
+    color:rgb(181, 155, 53);
+}
+
+.notesInput {
+    height: 50px;
+}
+
+textarea {
+    resize: none;
+  }
+
+.menuTime {
+    padding-left: 0px;
+    border: none;
+    background-color:  rgb(42, 41, 41);
+}
+
+.menuTimeInput {
+    border: 1px solid rgb(87, 87, 87);
+    background-color: rgb(2, 0, 20);
+    color:rgb(137, 77, 194);
+    display: inline;
+    border-radius: 3px;
+    width: 20%;
+    height: 22px;
+}
+
+.menuImage {
+    float:left;
+    width:40px;
+    margin-right:70px;
+}
+
+.menuAttrHead {
+    padding-top: 7px;    
+}
+
+.buttons {
+    /* float: left; */
+    margin: auto;
+    width: 145px;
+    height: 30px;
+}
+
+.menuButton {
+    border-radius: 8px;
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 30px;
+    float: left;
+    background-color: rgb(94,94,94);
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}

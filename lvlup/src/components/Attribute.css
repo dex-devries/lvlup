@@ -1,0 +1,66 @@
+.abilityHeader {
+  float: left;
+  margin-left: 15px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  height: 15px;
+}
+
+.abilityImage {
+  float: left;
+  width: 40px;
+}
+
+.attributeStats {
+  float: left;
+  width: 65%;
+  height: 60px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.attrFoot {
+  float: left;
+  width: 210px;
+  height: 30px;
+}
+
+.addThumb {
+  margin-top: 3px;
+  width: 15px;
+  height: 15px;
+}
+
+.statsThumb {
+  margin-top: 3px;
+  margin-right: 1px;
+  width: 21px;
+  height: 20px;
+}
+
+.attributeLevel,
+.attributeXP {
+  font-size: large;
+}
+
+.attributeLevel {
+  margin-top: 3px;
+}
+
+.attributeData {
+  float: right;
+  color: goldenrod;
+}
+
+.addButton,
+.statsButton {
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  float: left;
+  background-color: rgb(113, 113, 113);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
