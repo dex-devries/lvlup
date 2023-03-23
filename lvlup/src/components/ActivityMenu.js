@@ -69,6 +69,15 @@ const ActivityMenu = (props) => {
     }
   };
 
+  // increment -> 30 for seconds, 1 for minute, 1 for hour
+  const durationIncrementHandler = (increment) => {
+    // conditional to not allow negative count
+    if (Number(countInputRef.current.value) > 0 || increment === 1) {
+      const value = Number(countInputRef.current.value) + increment;
+      countInputRef.current.value = value.toString();
+    }
+  };
+
   return (
     <div className="activityMenu">
       <div className="menuHeader">
@@ -103,33 +112,57 @@ const ActivityMenu = (props) => {
         </div>
         <div className="menuLabel">
           <label>Duration</label>
-          <div className="menuInput menuTime">
-            <input
-              className="menuTimeInput"
-              type="number"
-              placeholder="hr"
-              min="0"
-              max="23"
-              ref={durationHrInputRef}
-            />
+          <div className="menuTime">
+            <div className="durationBlock">
+              <img
+                className="plusButtonSm"
+                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                alt="count increment button"
+                onClick={() => countIncrementHandler(1)}
+              />
+              <input
+                className="menuTimeInput"
+                type="number"
+                placeholder="hr"
+                min="0"
+                max="23"
+                ref={durationHrInputRef}
+              />
+            </div>
             :
-            <input
-              className="menuTimeInput"
-              type="number"
-              placeholder="min"
-              min="0"
-              max="59"
-              ref={durationMinInputRef}
-            />
+            <div className="durationBlock">
+              <img
+                className="plusButtonSm"
+                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                alt="count increment button"
+                onClick={() => countIncrementHandler(1)}
+              />
+              <input
+                className="menuTimeInput"
+                type="number"
+                placeholder="min"
+                min="0"
+                max="59"
+                ref={durationMinInputRef}
+              />
+            </div>
             :
-            <input
-              className="menuTimeInput"
-              type="number"
-              placeholder="sec"
-              min="0"
-              max="59"
-              ref={durationSecInputRef}
-            />
+            <div className="durationBlock">
+              <img
+                className="plusButtonSm"
+                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                alt="count increment button"
+                onClick={() => countIncrementHandler(1)}
+              />
+              <input
+                className="menuTimeInput"
+                type="number"
+                placeholder="sec"
+                min="0"
+                max="59"
+                ref={durationSecInputRef}
+              />
+            </div>
           </div>
         </div>
         <div className="menuLabel">
