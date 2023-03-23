@@ -10,7 +10,7 @@ const Attribute = (props) => {
   // console.log(props);
   const xp = props.stats.xp;
   const level = props.stats.level;
-  const abilityType = props.type;
+  const abilityType = props.className;
   // const xp = props.stats.xp;
   // const level = props.stats.level;
 
@@ -41,7 +41,7 @@ const Attribute = (props) => {
 
 
   return (
-    <div className={abilityType}>
+    <div>
       <img
         className="abilityImage"
         src={require(`../assets/no-bg/${abilityType}.png`)}

@@ -1,4 +1,4 @@
-// import './style.module.css';
+import './Grid.css';
 import Attribute from "./Attribute";
 import ActivityMenu from "./ActivityMenu";
 import StatsWindow from "./StatsWindow";
@@ -47,49 +47,49 @@ const Grid = (props) => {
       {/* {menu} */}
       <div className="layout">
         <Attribute
-          type="agility"
+          className="agility"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.agility}
         />
         <Attribute
-          type="intellect"
+          className="intellect"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.intellect}
         />
         <Attribute
-          type="strength"
+          className="strength"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.strength}
         />
         <Attribute
-          type="skill"
+          className="skill"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.skill}
         />
         <Attribute
-          type="attack"
+          className="attack"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.attack}
         />
         <Attribute
-          type="presence"
+          className="presence"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.presence}
         />
         <Attribute
-          type="alchemy"
+          className="alchemy"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.alchemy}
         />
         <Attribute
-          type="power"
+          className="power"
           addMenuOpen={addButtonClicked}
           statsWindowOpen={statsButtonClicked}
           stats={props.stats.power}
