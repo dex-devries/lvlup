@@ -197,7 +197,7 @@ const ActivityMenu = (props) => {
               className="countInput"
               type="number"
               min="1"
-              placeholder="Count"
+              placeholder="count"
               ref={countInputRef}
             />
             <img
