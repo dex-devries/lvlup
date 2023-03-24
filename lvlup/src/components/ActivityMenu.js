@@ -102,7 +102,7 @@ const ActivityMenu = (props) => {
           src={require(`../assets/no-bg/${props.attribute}.png`)}
           alt={props.attribute}
         />
-        <h3 className="menuAttrHead">{props.attribute.toUpperCase()}</h3>
+        <h2 className="menuAttrHead">{props.attribute.toUpperCase()}</h2>
       </div>
       <form onSubmit={addHandler}>
         <div className="menuLabel">
