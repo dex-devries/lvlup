@@ -43,9 +43,7 @@ input[type=number] {
     margin-right: 4px;
 }
 
-.menuHeader {
-    margin-bottom: 40px;
-}
+
 
 .menuLabel {
     margin-bottom: 20px;
@@ -145,11 +143,16 @@ textarea {
 .menuImage {
     float:left;
     width:40px;
-    margin-right:70px;
+    margin-right:45px;
+    /* margin-top: 6px; */
 }
 
 .menuAttrHead {
-    padding-top: 7px;    
+    padding-top: 0px;    
+}
+
+.menuHeader {
+    margin-bottom: 37px;
 }
 
 .buttons {
