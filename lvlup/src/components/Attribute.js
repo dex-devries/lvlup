@@ -5,7 +5,9 @@ import Badge from "./Badge";
 import BadgeTitle from "./BadgeTitle";
 import { badgeHandler } from "./badgeHandler";
 
-
+// Expected Props:
+// stats object for attribute with xp and level
+// className string for attribute/ability identifier
 const Attribute = (props) => {
   // console.log(props);
   const xp = props.stats.xp;
@@ -30,7 +32,7 @@ const Attribute = (props) => {
   const badgeImg = badgeSrc[0];
   const badgeTitle = badgeSrc[1];
 
-  // this logic creates the JSX for buttons (different for power attr)
+  // this logic creates the JSX for buttons (different for power attr, no add button)
   const addButton = <button title='Add activity' className="addButton" onClick={addClickHandler}>
   <img
     className="addThumb"
@@ -38,7 +40,6 @@ const Attribute = (props) => {
     alt="add button"
   />
   </button>;
-
 
   return (
     <div>
@@ -54,18 +55,9 @@ const Attribute = (props) => {
         <AttributeLevel level={level}/>
         <AttributeXP xp={xp}/>
       </div>
-      {/* <div className="badge">
-        <img className="badgeImg" src={require('../assets/icons/targeting.png')} alt="badge"/>
-      </div> */}
       <Badge image={badgeImg}/>
       <div className="attrFoot">
-        {/* <button title='Add activity' className="addButton" onClick={addClickHandler}>
-          <img
-            className="addThumb"
-            src={require("../assets/add-sm.png")}
-            alt="add button"
-          />
-        </button> */}
+        {/* Conditional for add button (no add button on power attr) */}
         {abilityType === "power" ? <div/> : addButton}
         <button title='View stats' className="statsButton" onClick={statsClickHandler}>
           <img
