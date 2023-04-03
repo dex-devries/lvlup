@@ -17,13 +17,14 @@ function App() {
   // state for stats
   const [stats, setStats] = useState(dynamicStatsObj);
 
-  // runs only once
+  // useEffect for local data storage
+  // runs once at page load - init
   useEffect(() => {
     const storedStats = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (localStorage.getItem(LOCAL_STORAGE_KEY)) setStats(storedStats);
   }, []);
 
-  // runs whenever stats is modified (state change)
+  // runs whenever stats is modified (state change) 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(stats));
   }, [stats]);
@@ -50,14 +51,17 @@ function App() {
     dynamicStatsObj["power"]["xp"] += stats["power"]["xp"];
     dynamicStatsObj["power"]["level"] += stats["power"]["level"] - 1;
 
-    console.log("Stats object after add:");
-    console.log(dynamicStatsObj);
+    // TESTING
+    // console.log("Stats object after add:");
+    // console.log(dynamicStatsObj);
 
     // update state and activities list
     // setUserData([...userData, newData]);
     setStats(dynamicStatsObj);
   };
 
+  // Header component: logo
+  // stats, addUserData function -> Grid component
   return (
     <>
       <Header />
