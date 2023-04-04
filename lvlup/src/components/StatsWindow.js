@@ -1,5 +1,7 @@
 import "./StatsWindow.css";
 
+// Expected props:
+// 
 const StatsWindow = (props) => {
     const cancelHandler = () => {
         props.close(null);
