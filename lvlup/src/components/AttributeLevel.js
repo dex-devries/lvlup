@@ -1,5 +1,7 @@
 import './Attribute.css';
 
+// Expected props: 
+// level number
 const AttributeLevel = (props) => {
   return (
     <div className="attributeLevel">
