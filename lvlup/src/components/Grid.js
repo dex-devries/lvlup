@@ -4,6 +4,13 @@ import ActivityMenu from "./ActivityMenu";
 import StatsWindow from "./StatsWindow";
 import React, { useState } from "react";
 
+// Suggested modifications:
+// ActivityMenu opens as modal
+
+// Expected props:
+// stats object - the object containing all attributes and current stats
+// dataHandler(data) - the function for adding new activity(ies)  
+// - data can be one activity object or a list of them (minor mod in App.js addUserData())
 const Grid = (props) => {
   let menu = <></>;
 
@@ -24,7 +31,7 @@ const Grid = (props) => {
     setStatsWindowAttribute(attribute);
   };
 
-  // add menu open
+  // add menu open - menuOpenAttr != null , menuOpenAttr == attribute
   if (menuOpenAttribute) {
     menu = (
       <ActivityMenu
@@ -98,15 +105,6 @@ const Grid = (props) => {
     </>
   );
 
-  //   <Attribute type='agility' data={props.data.agility}/>
-  //   <Attribute type='intellect' data={props.data.intellect}/>
-  //   <Attribute type='strength' data={props.data.strength}/>
-  //   <Attribute type='skill' data={props.data.skill}/>
-  //   <Attribute type='attack' data={props.data.attack}/>
-  //   <Attribute type='presence' data={props.data.presence}/>
-  //   <Attribute type='alchemy' data={props.data.alchemy}/>
-  //   <Attribute type='power' data={props.data.power}/>
-  //   </div>
 };
 
 export default Grid;
