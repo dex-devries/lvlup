@@ -2,6 +2,10 @@ import "./ActivityMenu.css";
 
 import React, { useRef } from "react";
 
+// Expected props:
+// attribute string - the selected attribute for the menu
+// menuClose(attribute) - function passed from Grid, menuClose(null) closes window
+// dataHandler(data) - App <-> Grid <-> ActivityMenu - passes data back to App
 const ActivityMenu = (props) => {
   // refs for all input fields
   const activityInputRef = useRef();
@@ -12,6 +16,7 @@ const ActivityMenu = (props) => {
   const countInputRef = useRef();
   const notesInputRef = useRef();
 
+  // TODO: abstract code block to new file
   // This whole code block just to style date correctly for dynamic max date :`(
   const date = new Date(Date.now());
   // console.log(date.getDay());

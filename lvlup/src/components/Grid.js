@@ -9,6 +9,7 @@ import React, { useState } from "react";
 
 // Expected props:
 // stats object - the object containing all attributes and current stats
+
 // dataHandler(data) - the function for adding new activity(ies)  // - data can be one activity object or a list of them (minor mod in App.js addUserData())
 // data object - the list of all activities - activitiesList in App.js - needed in StatsWindow
 const Grid = (props) => {
@@ -31,7 +32,7 @@ const Grid = (props) => {
     setStatsWindowAttribute(attribute);
   };
 
-  // add menu open
+  // add menu open - menuOpenAttr != null , menuOpenAttr == attribute
   if (menuOpenAttribute) {
     menu = (
       <ActivityMenu
