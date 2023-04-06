@@ -65,7 +65,7 @@ function App() {
   return (
     <>
       <Header />
-      <Grid stats={stats} dataHandler={addUserData} />
+      <Grid stats={stats} dataHandler={addUserData} data={activitiesList}/>
     </>
   );
 }
