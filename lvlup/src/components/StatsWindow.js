@@ -18,7 +18,7 @@ const StatsWindow = (props) => {
   let selectData = [];
   // select only activities with selected attribute (all activities for power)
   if (props.attribute !== "power") {
-    for (let i=0; i<props.data.length; i++) {
+    for (let i = 0; i < props.data.length; i++) {
       if (props.data[i].attribute === props.attribute) {
         selectData.push(props.data[i]);
       }
@@ -29,14 +29,16 @@ const StatsWindow = (props) => {
     selectData = props.data;
   }
 
+  // TESTING
+  console.log(`Testing data selection for attribute '${props.attribute}' in StatsWindow.js`);
+  console.log(selectData);
+
   return (
-    
     <div className="">
-      <Activity attribute={props.attribute} data={selectData}/>
+      <Activity attribute={props.attribute} data={selectData} />
       <button className="menuButton" onClick={cancelHandler}>
         Cancel
       </button>
-
     </div>
   );
 };
