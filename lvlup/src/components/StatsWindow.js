@@ -9,13 +9,14 @@ const StatsWindow = (props) => {
     props.close(null);
   };
 
+  console.log("Testing data prop passed from App/Grid");
+  console.log(props.data);
+
   return (
     <div className="">
       <button className="menuButton" onClick={cancelHandler}>
         Cancel
       </button>
-      
-      <h4 className="test-header">Testing props.data from App/Grid component \n{JSON.stringify(props.data)}</h4>
     </div>
   );
 };
