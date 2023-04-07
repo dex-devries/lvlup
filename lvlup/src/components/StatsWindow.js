@@ -33,12 +33,19 @@ const StatsWindow = (props) => {
   console.log(`Testing data selection for attribute '${props.attribute}' in StatsWindow.js`);
   console.log(selectData);
 
+  // generate JSX for Activity components
+  // This will be stateful eventually for infinite scroll
+  let activitiesJSX = [];
+  for (let act of selectData) {
+    activitiesJSX.push(<Activity data={act} key={act.id}/>)
+  }
+
   return (
     <div className="">
-      <Activity attribute={props.attribute} data={selectData} />
       <button className="menuButton" onClick={cancelHandler}>
         Cancel
       </button>
+      {activitiesJSX}
     </div>
   );
 };
