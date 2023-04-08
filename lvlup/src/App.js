@@ -1,5 +1,5 @@
 import Grid from "./components/Grid";
-import Header from "./components/Header";
+import Header from "./components/UI/Header";
 import { activities } from "./assets/testData/demoData";
 import { parseData } from "./dataHandler";
 import React, { useState, useEffect } from "react";
