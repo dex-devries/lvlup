@@ -36,7 +36,7 @@ const Attribute = (props) => {
   const addButton = <button title='Add activity' className="addButton" onClick={addClickHandler}>
   <img
     className="addThumb"
-    src={require("../assets/add-sm.png")}
+    src={require("../../assets/add-sm.png")}
     alt="add button"
   />
   </button>;
@@ -45,7 +45,7 @@ const Attribute = (props) => {
     <div>
       <img
         className="abilityImage"
-        src={require(`../assets/no-bg/${abilityType}.png`)}
+        src={require(`../../assets/no-bg/${abilityType}.png`)}
         alt={abilityType}
       />
       <h1 className="abilityHeader" style={{ color: "white" }}>
@@ -62,7 +62,7 @@ const Attribute = (props) => {
         <button title='View stats' className="statsButton" onClick={statsClickHandler}>
           <img
             className="statsThumb"
-            src={require("../assets/stats-neg-removebg.png")}
+            src={require("../../assets/stats-neg-removebg.png")}
             alt="stats button"
           />
         </button>

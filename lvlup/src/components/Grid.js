@@ -1,5 +1,5 @@
 import './Grid.css';
-import Attribute from "./Attribute";
+import Attribute from "./Attribute/Attribute";
 import ActivityMenu from "./ActivityMenu/ActivityMenu";
 import StatsWindow from "./StatsWindow/StatsWindow";
 import React, { useState } from "react";
