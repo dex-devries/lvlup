@@ -1,8 +1,8 @@
-import { badges } from "../assets/icons/badgeMap";
+import { badges } from "../../assets/icons/badgeMap";
 
 const badgeHandler = (level, attribute) => {
   // require.context for all badges
-  const images = require.context("../assets/icons/badges", true);
+  const images = require.context("../../assets/icons/badges", true);
   let collectedBadges = [["./targeting.png", "TARGET ACQUIRED"]];
 
   // logic to go through badgeMap and collect all badges

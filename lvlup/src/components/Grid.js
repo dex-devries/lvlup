@@ -1,7 +1,7 @@
 import './Grid.css';
-import Attribute from "./Attribute";
-import ActivityMenu from "./ActivityMenu";
-import StatsWindow from "./StatsWindow";
+import Attribute from "./Attribute/Attribute";
+import ActivityMenu from "./ActivityMenu/ActivityMenu";
+import StatsWindow from "./StatsWindow/StatsWindow";
 import React, { useState } from "react";
 
 // Suggested modifications:

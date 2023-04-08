@@ -1,4 +1,6 @@
 import "./ActivityMenu.css";
+import plusButton from "../../assets/no-bg/plus-nobg-theme.png";
+import minusButton from "../../assets/no-bg/minus-nobg-theme.png";
 
 import React, { useRef } from "react";
 
@@ -104,7 +106,7 @@ const ActivityMenu = (props) => {
       <div className="menuHeader">
         <img
           className="menuImage"
-          src={require(`../assets/no-bg/${props.attribute}.png`)}
+          src={require(`../../assets/no-bg/${props.attribute}.png`)}
           alt={props.attribute}
         />
         <h2 className="menuAttrHead">{props.attribute.toUpperCase()}</h2>
@@ -137,7 +139,7 @@ const ActivityMenu = (props) => {
             <div className="durationBlock">
               <img
                 className="plusButtonSm"
-                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                src={plusButton}
                 alt="count increment button"
                 onClick={() => durationIncrementHandler(3600)}
               />
@@ -155,7 +157,7 @@ const ActivityMenu = (props) => {
             <div className="durationBlock">
               <img
                 className="plusButtonSm"
-                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                src={plusButton}
                 alt="count increment button"
                 onClick={() => durationIncrementHandler(60)}
               />
@@ -173,7 +175,7 @@ const ActivityMenu = (props) => {
             <div className="durationBlock">
               <img
                 className="plusButtonSm"
-                src={require("../assets/no-bg/plus-nobg-theme.png")}
+                src={plusButton}
                 alt="count increment button"
                 onClick={() => durationIncrementHandler(15)}
               />
@@ -194,7 +196,7 @@ const ActivityMenu = (props) => {
           <div className="countInputDiv">
             <img
               className="plusButton"
-              src={require("../assets/no-bg/plus-nobg-theme.png")}
+              src={plusButton}
               alt="count increment button"
               onClick={() => countIncrementHandler(1)}
             />
@@ -207,7 +209,7 @@ const ActivityMenu = (props) => {
             />
             <img
               className="minusButton"
-              src={require("../assets/no-bg/minus-nobg-theme.png")}
+              src={minusButton}
               alt="count decrement button"
               onClick={() => countIncrementHandler(-1)}
             />
