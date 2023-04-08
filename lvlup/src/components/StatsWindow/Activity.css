@@ -1,0 +1,18 @@
+.activityCard {
+  width: 80%;
+  height: 15%;
+  border: 1px solid ghostwhite;
+  border-radius: 15px;
+  background-color: #3b3b3b;
+  margin: 0.5rem;
+  margin-left: 2rem;
+}
+
+.activityTitle {
+  color: ghostwhite;
+}
+
+.detailsContainer {
+  display: inline;
+  width: 200px;
+}

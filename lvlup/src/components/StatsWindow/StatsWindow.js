@@ -1,5 +1,6 @@
 import "./StatsWindow.css";
 import Activity from "./Activity";
+import backButton from "../../assets/no-bg/back-nobg.png";
 
 // Expected props:
 // close() - closes window with null argument (close(null)) -> Grid.js
@@ -30,23 +31,26 @@ const StatsWindow = (props) => {
   }
 
   // TESTING
-  console.log(`Testing data selection for attribute '${props.attribute}' in StatsWindow.js`);
-  console.log(selectData);
+  // console.log(`Testing data selection for attribute '${props.attribute}' in StatsWindow.js`);
+  // console.log(selectData);
 
   // generate JSX for Activity components
   // This will be stateful eventually for infinite scroll
   let activitiesJSX = [];
   for (let act of selectData) {
-    activitiesJSX.push(<Activity data={act} key={act.id}/>)
+    activitiesJSX.push(<Activity data={act} key={act.id} />);
   }
 
+  // reverse so most recent activities first
+  activitiesJSX = activitiesJSX.reverse();
+
   return (
-    <div className="">
+    <>
       <button className="menuButton" onClick={cancelHandler}>
-        Cancel
+        <img className="backButtonImg" src={backButton} alt="return to main menu"/>
       </button>
-      {activitiesJSX}
-    </div>
+      <div className="activitiesList">{activitiesJSX}</div>
+    </>
   );
 };
 
