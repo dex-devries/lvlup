@@ -8,13 +8,13 @@ const ActivityDate = (props) => {
   const year = dateSplit[0];
 
   return (
-    <div className="date-container">
+    <span className="date-container">
       <div className="expense-date">
         <div className="expense-date__month">{month}</div>
         <div className="expense-date__year">{year}</div>
         <div className="expense-date__day">{day}</div>
       </div>
-    </div>
+    </span>
   );
 };
 

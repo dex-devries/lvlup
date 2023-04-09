@@ -8,9 +8,10 @@ const Activity = (props) => {
   return (
     <div className="activityCard">
       <ActivityDate date={props.data.date} />
-      <div className="detailsContainer">
+
+      <span className="detailsContainer">
         <h2 className="activityTitle">{props.data.activity}</h2>
-      </div>
+      </span>
     </div>
   );
 };
