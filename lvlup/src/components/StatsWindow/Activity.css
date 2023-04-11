@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.detailsContainer {
+.titleContainer {
   /* display: inline-block; */
   width: 300px;
   margin-left: 30px;
@@ -47,4 +47,12 @@
 
 .expandButtonImg {
   width: 25px;
+}
+
+.detailsContainer {
+  display: block;
+  width: 310px;
+  height: 80px;
+  float: right;
+  background-color: white;
 }
