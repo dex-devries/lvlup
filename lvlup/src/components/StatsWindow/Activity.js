@@ -25,11 +25,13 @@ const Activity = (props) => {
   // logic for expansion (changes className of activityCard)
   let cardClass = "activityCard";
   cardClass += expanded ? " activityCardExpanded" : "";
+  // logic for JSX for activity details
+  let detailsJSX = expanded ? <div className="detailsContainer"></div> : <></> ;
 
   return (
     <div className={cardClass} onClick={expanded ? collapseActivity : expandActivity}>
       <ActivityDate date={props.data.date} />
-      <span className="detailsContainer">
+      <span className="titleContainer">
         <h2 className="activityTitle">{props.data.activity}</h2>
         <button className="expandButton" onClick={expanded ? collapseActivity : expandActivity}>
           <img
@@ -39,6 +41,7 @@ const Activity = (props) => {
           ></img>
         </button>
       </span>
+      {detailsJSX}
     </div>
   );
 };
