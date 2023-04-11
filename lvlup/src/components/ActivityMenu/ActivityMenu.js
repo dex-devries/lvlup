@@ -232,10 +232,10 @@ const ActivityMenu = (props) => {
           /> */}
         </div>
         <div className="buttons">
-          <button type="submit" className="menuButton">
+          <button type="submit" className="menuButton1">
             Add
           </button>
-          <button className="menuButton" onClick={cancelHandler}>
+          <button className="menuButton1" onClick={cancelHandler}>
             Cancel
           </button>
         </div>
