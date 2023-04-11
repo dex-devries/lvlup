@@ -26,7 +26,13 @@ const Activity = (props) => {
   let cardClass = "activityCard";
   cardClass += expanded ? " activityCardExpanded" : "";
   // logic for JSX for activity details
-  let detailsJSX = expanded ? <div className="detailsContainer"></div> : <></> ;
+  // let detailsJSX = expanded ? <div className="detailsContainer"></div> : <></> ;
+  let detailsJSX = <></>;
+  if (expanded) {
+    detailsJSX = <div className="detailsContainer">
+      <p>Duration: {props.data.duration} </p><p> Count: {props.data.count} </p><p> Notes: {props.data.notes} </p>
+    </div>
+  }
 
   return (
     <div className={cardClass} onClick={expanded ? collapseActivity : expandActivity}>
