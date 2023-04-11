@@ -10,7 +10,7 @@
 }
 
 .activityCardExpanded {
-  height: 180px;
+  height: 200px;
 }
 
 .activityTitle {
@@ -54,5 +54,12 @@
   width: 310px;
   height: 80px;
   float: right;
-  background-color: white;
+  background-color: none;
+}
+
+p {
+  margin: 0px;
+  padding-bottom: 10px;
+  padding-left: 4px;
+  color: ghostwhite;
 }
