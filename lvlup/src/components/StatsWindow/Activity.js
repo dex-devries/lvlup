@@ -4,7 +4,13 @@ import expandButton from "../../assets/no-bg/down-arrow-nobg.png";
 import collapseButton from "../../assets/no-bg/collapse-arrow-nobg.png";
 import React, { useState } from "react";
 
-
+// Expected props:
+// data object - the object data for the activity. Contains:
+// -- activity string - activity title/description
+// -- date string - format "YYYY-MM-DD"
+// -- duration string - format "HH:MM:SS"
+// -- count number
+// -- notes string
 const Activity = (props) => {
   // TESTING
   // console.log(props.data);
@@ -51,6 +57,7 @@ const Activity = (props) => {
           ></img>
         </button>
       </span>
+      {/* The array of the details elems - appended here as children to activityCard div */}
       {detailsJSX}
     </div>
     </>
