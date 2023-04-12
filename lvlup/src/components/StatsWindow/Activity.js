@@ -26,7 +26,7 @@ const Activity = (props) => {
   const collapseActivity = () => {
     // console.log("collapse");
     setExpanded(false);
-  }
+  };
 
   // logic for expansion (changes className of activityCard)
   let cardClass = "activityCard";
@@ -35,31 +35,41 @@ const Activity = (props) => {
   // let detailsJSX = expanded ? <div className="detailsContainer"></div> : <></> ;
   let detailsJSX = <></>;
   if (expanded) {
-    detailsJSX = <div className="detailsContainer">
-      <p>Duration: {props.data.duration} </p><p> Count: {props.data.count} </p><p> Notes: {props.data.notes} </p>
-    </div>
+    detailsJSX = (
+      <div className="detailsContainer">
+        <p className="detail">Duration: {props.data.duration} </p>
+        <p className="detail">Count: {props.data.count} </p>
+        <p className="detail">Notes: {props.data.notes} </p>
+      </div>
+    );
   }
 
   return (
     <>
-    {/* Conditional for onClick function to expand or collapse*/}
-    <div className={cardClass} onClick={expanded ? collapseActivity : expandActivity}>
-      <ActivityDate date={props.data.date} />
-      <span className="titleContainer">
-        <h2 className="activityTitle">{props.data.activity}</h2>
-        {/* Conditional for onClick function to expand or collapse*/}
-        <button className="expandButton" onClick={expanded ? collapseActivity : expandActivity}>
-          {/* Conditional for arrow img src to rotate arrow on expand/collapse*/}
-          <img
-            className="expandButtonImg"
-            alt="expand button"
-            src={expanded ? collapseButton : expandButton}
-          ></img>
-        </button>
-      </span>
-      {/* The array of the details elems - appended here as children to activityCard div */}
-      {detailsJSX}
-    </div>
+      {/* Conditional for onClick function to expand or collapse*/}
+      <div
+        className={cardClass}
+        onClick={expanded ? collapseActivity : expandActivity}
+      >
+        <ActivityDate date={props.data.date} />
+        <span className="titleContainer">
+          <h2 className="activityTitle">{props.data.activity}</h2>
+          {/* Conditional for onClick function to expand or collapse*/}
+          <button
+            className="expandButton"
+            onClick={expanded ? collapseActivity : expandActivity}
+          >
+            {/* Conditional for arrow img src to rotate arrow on expand/collapse*/}
+            <img
+              className="expandButtonImg"
+              alt="expand button"
+              src={expanded ? collapseButton : expandButton}
+            ></img>
+          </button>
+        </span>
+        {/* The array of the details elems - appended here as children to activityCard div */}
+        {detailsJSX}
+      </div>
     </>
   );
 };
