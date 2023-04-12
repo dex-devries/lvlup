@@ -35,11 +35,15 @@ const Activity = (props) => {
   }
 
   return (
+    <>
+    {/* Conditional for onClick function to expand or collapse*/}
     <div className={cardClass} onClick={expanded ? collapseActivity : expandActivity}>
       <ActivityDate date={props.data.date} />
       <span className="titleContainer">
         <h2 className="activityTitle">{props.data.activity}</h2>
+        {/* Conditional for onClick function to expand or collapse*/}
         <button className="expandButton" onClick={expanded ? collapseActivity : expandActivity}>
+          {/* Conditional for arrow img src to rotate arrow on expand/collapse*/}
           <img
             className="expandButtonImg"
             alt="expand button"
@@ -49,6 +53,7 @@ const Activity = (props) => {
       </span>
       {detailsJSX}
     </div>
+    </>
   );
 };
 
