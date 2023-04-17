@@ -6,6 +6,8 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 // close() - closes window with null argument (close(null)) -> Grid.js
 // attribute string - the selected attribute for window TODO condition for power, which is all attrs combined
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
+
+// TODO: fix back button styles
 const StatsWindow = (props) => {
   const cancelHandler = () => {
     props.close(null);
