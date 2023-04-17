@@ -7,7 +7,6 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 // attribute string - the selected attribute for window TODO condition for power, which is all attrs combined
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
 
-// TODO: fix back button styles
 const StatsWindow = (props) => {
   const cancelHandler = () => {
     props.close(null);
@@ -48,7 +47,7 @@ const StatsWindow = (props) => {
 
   return (
     <>
-      <button className="menuButton" onClick={cancelHandler}>
+      <button className="backButton" onClick={cancelHandler}>
         <img className="backButtonImg" src={backButton} alt="return to main menu"/>
       </button>
       <div className="activitiesList">{activitiesJSX}</div>
