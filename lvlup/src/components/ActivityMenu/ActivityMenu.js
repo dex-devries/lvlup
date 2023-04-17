@@ -8,6 +8,7 @@ import React, { useRef } from "react";
 // attribute string - the selected attribute for the menu
 // menuClose(attribute) - function passed from Grid, menuClose(null) closes window
 // dataHandler(data) - App <-> Grid <-> ActivityMenu - passes data back to App
+// TODO: fix buttons to be square with small images and hover 
 const ActivityMenu = (props) => {
   // refs for all input fields
   const activityInputRef = useRef();
