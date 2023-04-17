@@ -10,14 +10,15 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 .activityMenu {
-    width: 320px;
+    width: 314px;
     height: 410px;
-    margin-left: 44px;
+    margin-left: 40px;
     margin-bottom: 20px;
     background-color: rgb(30, 30, 30);
     color: white;
-    padding: 10px;
+    /* padding: 10px; */
     padding-left: 30px;
+    padding-right: 5px;
     border-radius: 15px;
     border: 1px solid rgb(87, 87, 87);
 }
@@ -148,7 +149,8 @@ textarea {
 }
 
 .menuAttrHead {
-    padding-top: 0px;    
+    padding-top: 0px;
+    margin-left: 100px;    
 }
 
 .menuHeader {
@@ -157,7 +159,7 @@ textarea {
 
 .buttons {
     /* float: left; */
-    margin: auto;
+    margin-left: 100px;
     width: 145px;
     height: 30px;
 }
@@ -186,11 +188,11 @@ textarea {
 }
 
 .addActivityImg {
-    margin-top: 2px;
-    width: 20px;
+    margin-top: 4px;
+    width: 15px;
 }
 
 .cancelImg {
-    margin-top: 3px;
-    width: 19px;
+    margin-top: 4px;
+    width: 15px;
 }
