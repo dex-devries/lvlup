@@ -1,6 +1,8 @@
 import "./ActivityMenu.css";
 import plusButton from "../../assets/no-bg/plus-nobg-theme.png";
 import minusButton from "../../assets/no-bg/minus-nobg-theme.png";
+import addActivityImg from "../../assets/add-removebg.png";
+import cancelActivityImg from "../../assets/cancel-nobg.png";
 
 import React, { useRef } from "react";
 
@@ -233,11 +235,13 @@ const ActivityMenu = (props) => {
           /> */}
         </div>
         <div className="buttons">
-          <button type="submit" className="menuButton1">
-            Add
+          <button title="Add activity" type="submit" className="menuButton1">
+            {/* Add */}
+            <img className="addActivityImg" src={addActivityImg} alt="add activity" />
           </button>
-          <button className="menuButton1" onClick={cancelHandler}>
-            Cancel
+          <button title="Cancel" className="menuButton1" onClick={cancelHandler}>
+            {/* Cancel */}
+            <img className="cancelImg" src={cancelActivityImg} alt="cancel" />
           </button>
         </div>
       </form>
