@@ -47,8 +47,8 @@ const StatsWindow = (props) => {
 
   return (
     <>
-      <button className="backButton" onClick={cancelHandler}>
-        <img className="backButtonImg" src={backButton} alt="return to main menu"/>
+      <button title="Return to main menu" className="backButton" onClick={cancelHandler}>
+        <img className="backButtonImg" src={backButton} alt="rback button"/>
       </button>
       <div className="activitiesList">{activitiesJSX}</div>
     </>
