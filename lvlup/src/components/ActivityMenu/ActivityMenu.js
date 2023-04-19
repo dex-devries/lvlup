@@ -2,7 +2,6 @@ import "./ActivityMenu.css";
 import plusButton from "../../assets/no-bg/plus-nobg-theme.png";
 import minusButton from "../../assets/no-bg/minus-nobg-theme.png";
 import addActivityImg from "../../assets/add-removebg.png";
-import cancelActivityImg from "../../assets/cancel-nobg.png";
 import backButtonImg from "../../assets/no-bg/back-nobg.png";
 
 import React, { useRef } from "react";

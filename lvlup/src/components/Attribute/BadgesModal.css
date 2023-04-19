@@ -1,0 +1,6 @@
+.badgesModalContainer {
+    background-color: black;
+    color: ghostwhite;
+    display: block;
+    visibility: hidden;
+}
