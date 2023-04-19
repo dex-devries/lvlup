@@ -9,6 +9,8 @@ const Badge = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const hoverEnterHandler = () => {
+    console.log("mouse entered badge");
+    // NOT WORKING
     setModalOpen(true);
   };
 
@@ -17,8 +19,7 @@ const Badge = (props) => {
   };
 
   if (modalOpen) {
-    const modalRoot = document.getElementById("modal-root");
-    ReactDOM.createPortal(<BadgesModal />, modalRoot);
+    ReactDOM.createPortal(<BadgesModal />, document.getElementById("modal-root"));
   }
   
   return (

@@ -2,7 +2,7 @@ import "./BadgesModal.css";
 
 const BadgesModal = () => {
     return ( <div className="badgesModalContainer">
-        <h1 style={{"color": "white"}}>MODAL</h1>
+        <h1>MODAL</h1>
     </div> );
 }
  
