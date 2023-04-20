@@ -1,6 +1,4 @@
 import "./Badge.css";
-// import BadgesModal from "./BadgesModal";
-// import ReactDOM from "react-dom";
 import React, { useState } from "react";
 
 // Expected props:
@@ -12,6 +10,10 @@ const Badge = (props) => {
     console.log("clicked badge");
   }
 
+  if (modalOpen) {
+    ReactDOM.createPortal(<BadgesModal />, document.getElementById("modal-root"));
+  }
+  
   return (
     <div className="badge" onClick={badgeClickHandler}>
       <img className="badgeImg" src={props.image} alt="badge" />
