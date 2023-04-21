@@ -3,7 +3,7 @@ import AttributeLevel from "./AttributeLevel";
 import AttributeXP from "./AttributeXP";
 import Badge from "./Badge";
 import BadgeTitle from "./BadgeTitle";
-import { badgeHandler } from "./badgeHandler";
+import { badgeHandler } from "../Logic/badgeHandler";
 
 // Expected Props:
 // stats object for attribute with xp and level
@@ -28,9 +28,13 @@ const Attribute = (props) => {
 
   // handle badge/award logic
   // badgeHandler returns [badgeImg, badgeTitle]
-  const badgeSrc = badgeHandler(level, abilityType);
-  const badgeImg = badgeSrc[0];
-  const badgeTitle = badgeSrc[1];
+  // const badgeSrc = badgeHandler(level, abilityType);
+  // const badgeImg = badgeSrc[0];
+  // const badgeTitle = badgeSrc[1];
+  const images = require.context("../../assets/icons/badges", true);
+  const badges = badgeHandler(level, abilityType);
+  const badgeImg = images(badges[0][0]);
+  const badgeTitle = badges[0][1];
 
   // this logic creates the JSX for buttons (different for power attr, no add button)
   const addButton = <button title='Add activity' className="addButton" onClick={addClickHandler}>
@@ -55,7 +59,7 @@ const Attribute = (props) => {
         <AttributeLevel level={level}/>
         <AttributeXP xp={xp}/>
       </div>
-      <Badge image={badgeImg}/>
+      <Badge image={badgeImg} badgeWindowOpen={props.badgeWindowOpen}/>
       <div className="attrFoot">
         {/* Conditional for add button (no add button on power attr) */}
         {abilityType === "power" ? <div/> : addButton}

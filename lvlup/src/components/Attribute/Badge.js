@@ -6,6 +6,7 @@ const Badge = (props) => {
 
   const badgeClickHandler = () => {
     console.log("clicked badge");
+    props.badgeWindowOpen(true);
   }
 
   return (

@@ -5,8 +5,6 @@ import StatsWindow from "./StatsWindow/StatsWindow";
 import React, { useState } from "react";
 import BadgeWindow from './BadgeWindow/BadgeWindow';
 
-// Suggested modifications:
-// ActivityMenu opens as modal
 
 // Expected props:
 // stats object - the object containing all attributes and current stats
@@ -59,7 +57,7 @@ const Grid = (props) => {
 
   // badgeWindow open
   if (badgeWindowOpen) {
-    menu = <BadgeWindow close={badgeClicked} data={props.data}/>
+    menu = <BadgeWindow close={badgeClicked} stats={props.stats}/>
     return menu;
   }
 
