@@ -1,8 +1,6 @@
 import { badges } from "../../assets/icons/badgeMap";
 
 const badgeHandler = (level, attribute) => {
-  // require.context for all badges
-  const images = require.context("../../assets/icons/badges", true);
   let collectedBadges = [["./targeting.png", "TARGET ACQUIRED"]];
 
   // logic to go through badgeMap and collect all badges
@@ -21,12 +19,15 @@ const badgeHandler = (level, attribute) => {
   // console.log(collectedBadges);
   // console.log(images);
 
+  // NOTE: This logic now in Attribute.js with images require.context
   // most recent (highest level) badge from the end of collectedBadges array
   // [0] index at the end gets path, [1] would get badge name
-  const badgeImgSrc = collectedBadges[collectedBadges.length - 1][0];
-  const badgeTitle = collectedBadges[collectedBadges.length - 1][1];
+  // const badgeImgSrc = collectedBadges[collectedBadges.length - 1][0];
+  // const badgeTitle = collectedBadges[collectedBadges.length - 1][1];
 
-  return [images(badgeImgSrc), badgeTitle];
+  // return [images(badgeImgSrc), badgeTitle];
+  collectedBadges.reverse();
+  return collectedBadges;
 };
 
 export { badgeHandler };

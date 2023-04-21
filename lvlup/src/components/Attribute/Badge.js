@@ -1,15 +1,12 @@
 import "./Badge.css";
-import BadgesModal from "./BadgesModal";
-import ReactDOM from "react-dom";
-import React, { useState } from "react";
 
 // Expected props:
 // image object from require.context in badgeHandler.js
 const Badge = (props) => {
-  const [modalOpen, setModalOpen] = useState(false);
 
   const badgeClickHandler = () => {
     console.log("clicked badge");
+    props.badgeWindowOpen(true);
   }
 
   return (
