@@ -1,0 +1,20 @@
+.badgeWindowCard {
+    margin-left: 21px;
+    width: 400px;
+    height: 800px;
+}
+
+.badgeAttrHead {
+    color: ghostwhite;
+    text-align: center;
+}
+
+.attrBadgesContainer {
+    display:flex;
+    justify-content: center;
+    height: 54px;
+}
+
+.badgeImg {
+    height: 41px;
+}

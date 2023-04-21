@@ -1,11 +1,11 @@
 import { badgeHandler } from "./badgeHandler";
-import { attributes } from "./attributesList";
 
 const badgeCollector = (stats) => {
   let badgesObject = {};
-  for (let attr of stats) {
+  for (let attr in stats) {
     badgesObject[attr] = badgeHandler(stats[attr].level, attr);
   }
+  return badgesObject;
 };
 
 export {badgeCollector};
