@@ -10,9 +10,11 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 .activityMenu {
+    position: fixed;
+    top: 90px;
     width: 314px;
     height: 410px;
-    margin-left: 40px;
+    margin-left: 46px;
     margin-bottom: 20px;
     background-color: rgb(30, 30, 30);
     color: white;
