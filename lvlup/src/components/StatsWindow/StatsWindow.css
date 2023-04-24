@@ -1,46 +1,64 @@
 .test-header {
-    color: white;
+  color: white;
 }
 
 .activitiesList {
-    display: block;
-    float: left;
-    width: 100%;
+  display: block;
+  /* position: fixed; */
+  /* top: 100px; */
+  float: left;
+  width: 480px;
+  padding-top: 105px;
 }
 
 .backButtonImg {
-    /* float: left; */
-    margin-top: 3px;
-    margin-right: 1px;
-    width: 15px;
+  /* float: left; */
+  margin-top: 3px;
+  margin-right: 1px;
+  width: 15px;
 }
 
 .backButton {
-    align-items: center;
-    border-radius: 8px;
-    border: 1px solid rgb(0, 0, 0);
-    width: 32px;
-    height: 30px;
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
-    float: left;
-    background-color: rgb(113, 113, 113);
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-    box-shadow: inset 2px 2px 1px 0px rgb(200, 200, 200);
-    
-  }
+  /* position: absolute; */
+  /* position: fixed; */
+  top: 70px;
   
-  .backButton:hover{
-    background-color: rgb(88, 88, 88);
-  }
-  
-  /* .addButton:focus, .statsButton:focus {
+  /* align-items: center; */
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 32px;
+  height: 30px;
+  /* margin-left: 2rem; */
+  /* margin-bottom: 0.5rem; */
+  /* float: left; */
+  background-color: rgb(113, 113, 113);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  box-shadow: inset 2px 2px 1px 0px rgb(200, 200, 200);
+}
+
+.backButton:hover {
+  background-color: rgb(88, 88, 88);
+}
+
+/* .addButton:focus, .statsButton:focus {
     background-color: rgb(74, 74, 74);
   } */
-  .backButton:active {
-    transform: scale(0.95);
-    /* width: 34px;
+.backButton:active {
+  transform: scale(0.95);
+  /* width: 34px;
     height: 29px; */
-    /* border: 2px solid goldenrod; */
-    box-shadow: inset -2px -2px 1px 0px rgb(200, 200, 200);}
+  /* border: 2px solid goldenrod; */
+  box-shadow: inset -2px -2px 1px 0px rgb(200, 200, 200);
+}
+
+.backButtonContainer {
+  position: fixed;
+  top: 74px;
+  /* margin-left: 32px; */
+  padding-left: 32px;
+  height: 35px;
+  width: 480px;
+  /* z-index: 2; */
+  background-color: black;
+}

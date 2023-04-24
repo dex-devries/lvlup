@@ -1,4 +1,6 @@
 .layout {
+    position: fixed;
+    top: 90px;
     width: 400px;
     height: 800px;
 
