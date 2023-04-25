@@ -26,12 +26,15 @@ const BadgeWindow = (props) => {
       if (badge[0] !== "./targeting.png") {
         // push badge img JSX
         attrBadges.push(
-          <img
-            className="badgeImg"
-            src={images(badge[0])}
-            key={badge[0]}
-            alt="badge"
-          />
+          <div className="badgeContainer">
+            <img
+              className="badgeImg"
+              src={images(badge[0])}
+              key={badge[0]}
+              alt="badge"
+            />
+            <h6 className="badgesTitle">{badge[1].toUpperCase()}</h6>
+          </div>
         );
       }
     }
@@ -43,14 +46,20 @@ const BadgeWindow = (props) => {
     );
   }
 
-  return <div className="badgeWindowCard">
-    <>
-    <button title="Return to main menu" className="backButtonFixed" onClick={cancelHandler}>
-        <img className="backButtonImg" src={backButton} alt="rback button"/>
-      </button>
-    {badgesJSX}
-    </>
-    </div>;
+  return (
+    <div className="badgeWindowCard">
+      <>
+        <button
+          title="Return to main menu"
+          className="backButtonFixed"
+          onClick={cancelHandler}
+        >
+          <img className="backButtonImg" src={backButton} alt="rback button" />
+        </button>
+        {badgesJSX}
+      </>
+    </div>
+  );
 };
 
 export default BadgeWindow;
