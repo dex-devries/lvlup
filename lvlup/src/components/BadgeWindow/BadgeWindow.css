@@ -8,16 +8,20 @@
 .badgeAttrHead {
     color: ghostwhite;
     text-align: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .attrBadgesContainer {
     display:flex;
+    flex-direction: row-reverse;
     justify-content: center;
-    height: 54px;
+    height: 70px;
 }
 
 .badgeImg {
     height: 41px;
+    margin-left: 5px;
 }
 
 .backButtonFixed {
@@ -37,4 +41,19 @@
     position: fixed;
     top: 80px;
     margin-left: 20px;
+  }
+
+  .badgesTitle {
+    color: goldenrod;
+    margin-top: 3px;
+    text-align: center;
+  }
+  
+  .badgeContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    align-items: center;
+    margin-left: 2px;
+    margin-right: 2px;
   }
