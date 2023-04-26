@@ -44,6 +44,12 @@ const Activity = (props) => {
     );
   }
 
+  // logic for collapsing Activity header text (props.data.activity)
+  let activityTitle = props.data.activity.length >= 22 ? props.data.activity.slice(0, 15) + "..." : props.data.activity;
+  if (expanded) {
+    activityTitle = props.data.activity;
+  }
+
   return (
     <>
       {/* Conditional for onClick function to expand or collapse*/}
@@ -53,7 +59,7 @@ const Activity = (props) => {
       >
         <ActivityDate date={props.data.date} />
         <span className="titleContainer">
-          <h2 className="activityTitle">{props.data.activity}</h2>
+          <h2 className="activityTitle">{activityTitle}</h2>
           {/* Conditional for onClick function to expand or collapse*/}
           <button
             className="expandButton"

@@ -10,7 +10,7 @@
 }
 
 .activityCardExpanded {
-  height: 200px;
+  height: 230px;
 }
 
 .activityTitle {
@@ -18,7 +18,8 @@
   /* padding-top: 25px; */
   float:left;
   color: ghostwhite;
-  text-align: center;
+  /* text-align: center; */
+  width: 245px;
 }
 
 .titleContainer {
