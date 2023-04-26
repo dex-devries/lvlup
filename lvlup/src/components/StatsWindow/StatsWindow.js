@@ -7,6 +7,12 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 // attribute string - the selected attribute for window TODO condition for power, which is all attrs combined
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
 
+// TODO: 
+// fix activity length issue
+// migrate activities list to History.js
+// add 3 tabs at top of screen
+// "Stats" "Notes" "History"
+
 const StatsWindow = (props) => {
   const cancelHandler = () => {
     props.close(null);
