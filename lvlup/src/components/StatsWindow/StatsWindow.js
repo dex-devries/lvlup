@@ -62,6 +62,9 @@ const StatsWindow = (props) => {
           <img className="backButtonImg" src={backButton} alt="rback button" />
         </button>
       </div>
+      <div className="tabs">
+        
+      </div>
       <div className="activitiesList">{activitiesJSX}</div>
     </>
   );
