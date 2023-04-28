@@ -1,14 +1,14 @@
 import "./StatsWindow.css";
-import Activity from "./Activity";
 import backButton from "../../assets/no-bg/back-nobg.png";
+import History from "./History";
+import React, {useState} from 'react';
 
 // Expected props:
 // close() - closes window with null argument (close(null)) -> Grid.js
 // attribute string - the selected attribute for window TODO condition for power, which is all attrs combined
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
 
-// TODO: 
-// fix activity length issue
+// TODO:
 // migrate activities list to History.js
 // add 3 tabs at top of screen
 // "Stats" "Notes" "History"
@@ -18,51 +18,68 @@ const StatsWindow = (props) => {
     props.close(null);
   };
 
-  // TESTING
-  // console.log("Testing data prop passed from App/Grid");
-  // console.log(props.data);
+  const [history, setHistory] = useState(true);
+  const [stats, setStats] = useState(false);
+  const [notes, setNotes] = useState(false);
 
-  // LOGIC FOR DATA SELECT
-  let selectData = [];
-  // select only activities with selected attribute (all activities for power)
-  if (props.attribute !== "power") {
-    for (let i = 0; i < props.data.length; i++) {
-      if (props.data[i].attribute === props.attribute) {
-        selectData.push(props.data[i]);
-      }
-    }
+  let contentJSX = <></>;
+
+  if (stats) {
+
   }
-  // for power attr, all activities
-  else {
-    selectData = props.data;
+  else if (notes) {
+
   }
 
-  // TESTING
-  // console.log(`Testing data selection for attribute '${props.attribute}' in StatsWindow.js`);
-  // console.log(selectData);
-
-  // generate JSX for Activity components
-  // This will be stateful eventually for infinite scroll
-  let activitiesJSX = [];
-  for (let act of selectData) {
-    activitiesJSX.push(<Activity data={act} key={act.id} />);
+  else if (history) {
+    contentJSX = <History attribute={props.attribute} data={props.data}/>
   }
-
-  // reverse so most recent activities first
-  activitiesJSX = activitiesJSX.reverse();
 
   return (
     <>
-      <div className="backButtonContainer">
-        <button
+      {/* <div className="backButtonContainer"> */}
+        {/* <button
+          title="Return to main menu"
+          className="backButton"
+          onClick={cancelHandler}
+        >
+          <img className="backButtonImg" src={backButton} alt="rback button" />
+        </button> */}
+      {/* </div> */}
+      <nav className="tabs">
+      <button
           title="Return to main menu"
           className="backButton"
           onClick={cancelHandler}
         >
           <img className="backButtonImg" src={backButton} alt="rback button" />
         </button>
-      </div>
-      <div className="activitiesList">{activitiesJSX}</div>
+
+        <button className={stats ? "tab tab-active" : "tab"} onClick={() => {
+          setStats(true);
+          setNotes(false);
+          setHistory(false);
+
+        }}> Stats
+        </button>
+        <button className={notes ? "tab tab-active" : "tab"} onClick={() => {
+          setNotes(true);
+          setStats(false);
+          setHistory(false);
+        }}> Notes
+        </button>
+        <button className={history ? "tab tab-active" : "tab"} onClick={() => {
+          setHistory(true);
+          setNotes(false);
+          setStats(false);
+        }}> History
+        </button>
+      </nav>
+        <div className="content">
+          {contentJSX}
+        </div>
+
+      {/* <div className="activitiesList">{activitiesJSX}</div> */}
     </>
   );
 };

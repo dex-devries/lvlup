@@ -2,6 +2,9 @@ import { badgeCollector } from "../Logic/badgeCollectionHandler";
 import backButton from "../../assets/no-bg/back-nobg.png";
 import "./BadgeWindow.css";
 
+
+// TODO: style badges to wrap in 400px width 
+
 const BadgeWindow = (props) => {
   const cancelHandler = () => {
     props.close(false);

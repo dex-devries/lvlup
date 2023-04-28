@@ -1,16 +1,16 @@
 .activityCard {
   padding-top: 0px;
-  width: 80%;
+  width: 86%;
   height: 90px;
   border: 1px solid ghostwhite;
   border-radius: 15px;
   background-color: #3b3b3b;
   margin: 0.5rem;
-  margin-left: 2rem;
+  margin-left: 0.8rem;
 }
 
 .activityCardExpanded {
-  height: 200px;
+  height: 230px;
 }
 
 .activityTitle {
@@ -18,7 +18,8 @@
   /* padding-top: 25px; */
   float:left;
   color: ghostwhite;
-  text-align: center;
+  /* text-align: center; */
+  width: 245px;
 }
 
 .titleContainer {
@@ -42,7 +43,7 @@
   float: right;
   margin-top: 27px;
   /* margin-left: 20px; */
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .expandButtonImg {
