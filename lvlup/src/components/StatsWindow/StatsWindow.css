@@ -84,7 +84,7 @@
   background-color: rgb(5, 0, 51);
   color: ghostwhite;
   font-size: 16px;
-  border-radius: 15% 15% 0% 0%;
+  border-radius: 10px 10px 0px 0px;
   border: 1px solid rgb(61, 61, 61);
 }
 .tab:active {
@@ -103,6 +103,6 @@
   background-color: rgb(62, 56, 111);
   /* height: 600px; */
   width: 440px;
-  border-radius: 3%;
+  border-radius: 15px;
   border: 1px solid rgb(62, 56, 111);
 }
