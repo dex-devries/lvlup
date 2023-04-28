@@ -71,11 +71,11 @@ const StatsWindow = (props) => {
           <img className="backButtonImg" src={backButton} alt="rback button" />
         </button>
 
-        <button class="tab" onClick={null}>
+        <button class="tab" onClick={null}> Stats
         </button>
-        <button class="tab" onClick={null}>
+        <button class="tab" onClick={null}> Notes
         </button>
-        <button class="tab" onClick={null}>
+        <button class="tab" onClick={null}> History
         </button>
       </nav>
       <div className="activitiesList">{activitiesJSX}</div>

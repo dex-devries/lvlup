@@ -8,7 +8,7 @@
   /* top: 100px; */
   float: left;
   width: 480px;
-  padding-top: 10px;
+  padding-top: 20px;
   /* padding-top: 105px; */
 }
 
@@ -73,7 +73,7 @@
   /* padding-top: 107px; */
   background-color: black;
   position: fixed;
-  top: 78px;
+  top: 85px;
   align-items: center;
   padding-left: 38px;
 }
@@ -82,4 +82,7 @@
   width: 100px;
   height:35px;
   background-color: rgb(103, 103, 103);
+  color: ghostwhite;
+  font-size: 16px;
+  border-radius: 15% 15% 0% 0%;
 }
