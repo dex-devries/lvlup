@@ -78,7 +78,11 @@ const StatsWindow = (props) => {
         <button class="tab" onClick={null}> History
         </button>
       </nav>
-      <div className="activitiesList">{activitiesJSX}</div>
+        <div className="content">
+          
+        </div>
+
+      {/* <div className="activitiesList">{activitiesJSX}</div> */}
     </>
   );
 };
