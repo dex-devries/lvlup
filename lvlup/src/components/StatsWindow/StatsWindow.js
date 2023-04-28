@@ -12,6 +12,7 @@ import React, {useState} from 'react';
 // migrate activities list to History.js
 // add 3 tabs at top of screen
 // "Stats" "Notes" "History"
+// refactor state
 
 const StatsWindow = (props) => {
   const cancelHandler = () => {
