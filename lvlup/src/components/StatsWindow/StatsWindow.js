@@ -1,6 +1,7 @@
 import "./StatsWindow.css";
 import Activity from "./Activity";
 import backButton from "../../assets/no-bg/back-nobg.png";
+import History from "./History";
 
 // Expected props:
 // close() - closes window with null argument (close(null)) -> Grid.js
@@ -8,7 +9,6 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
 
 // TODO:
-// fix activity length issue
 // migrate activities list to History.js
 // add 3 tabs at top of screen
 // "Stats" "Notes" "History"
@@ -51,6 +51,23 @@ const StatsWindow = (props) => {
   // reverse so most recent activities first
   activitiesJSX = activitiesJSX.reverse();
 
+  const history = true;
+  const stats = false;
+  const notes = false;
+
+  let contentJSX = <></>;
+
+  if (stats) {
+
+  }
+  else if (notes) {
+
+  }
+
+  else if (history) {
+    contentJSX = <History attribute={props.attribute} data={props.data}/>
+  }
+
   return (
     <>
       {/* <div className="backButtonContainer"> */}
@@ -71,15 +88,15 @@ const StatsWindow = (props) => {
           <img className="backButtonImg" src={backButton} alt="rback button" />
         </button>
 
-        <button class="tab" onClick={null}> Stats
+        <button className={stats ? "tab tab-active" : "tab"} onClick={null}> Stats
         </button>
-        <button class="tab" onClick={null}> Notes
+        <button className={notes ? "tab tab-active" : "tab"} onClick={null}> Notes
         </button>
-        <button class="tab" onClick={null}> History
+        <button className={history ? "tab tab-active" : "tab"} onClick={null}> History
         </button>
       </nav>
         <div className="content">
-          
+          {contentJSX}
         </div>
 
       {/* <div className="activitiesList">{activitiesJSX}</div> */}

@@ -45,7 +45,7 @@ const Activity = (props) => {
   }
 
   // logic for collapsing Activity header text (props.data.activity)
-  let activityTitle = props.data.activity.length >= 22 ? props.data.activity.slice(0, 15) + "..." : props.data.activity;
+  let activityTitle = props.data.activity.length >= 23 ? props.data.activity.slice(0, 16) + "..." : props.data.activity;
   if (expanded) {
     activityTitle = props.data.activity;
   }
