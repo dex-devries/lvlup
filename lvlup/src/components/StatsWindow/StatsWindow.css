@@ -8,7 +8,8 @@
   /* top: 100px; */
   float: left;
   width: 480px;
-  padding-top: 105px;
+  padding-top: 10px;
+  /* padding-top: 105px; */
 }
 
 .backButtonImg {
@@ -21,11 +22,11 @@
 .backButton {
   /* position: absolute; */
   /* position: fixed; */
-  top: 70px;
+  /* top: 70px; */
   
   /* align-items: center; */
   border-radius: 8px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(183, 183, 183);
   width: 32px;
   height: 30px;
   /* margin-left: 2rem; */
@@ -35,6 +36,9 @@
   color: rgb(0, 0, 0);
   font-weight: 600;
   box-shadow: inset 2px 2px 1px 0px rgb(200, 200, 200);
+  float:left;
+  margin-top: 3px;
+  margin-right: 5px;
 }
 
 .backButton:hover {
@@ -61,4 +65,21 @@
   width: 480px;
   /* z-index: 2; */
   background-color: black;
+}
+
+.tabs {
+  width: 480px;
+  height: 35px;
+  /* padding-top: 107px; */
+  background-color: black;
+  position: fixed;
+  top: 78px;
+  align-items: center;
+  padding-left: 38px;
+}
+
+.tab {
+  width: 100px;
+  height:35px;
+  background-color: rgb(103, 103, 103);
 }

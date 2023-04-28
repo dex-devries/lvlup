@@ -7,7 +7,7 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 // attribute string - the selected attribute for window TODO condition for power, which is all attrs combined
 // data object - an object that is a list of all activities from App.js -> Grid.js -> StatsWindow.js
 
-// TODO: 
+// TODO:
 // fix activity length issue
 // migrate activities list to History.js
 // add 3 tabs at top of screen
@@ -53,18 +53,31 @@ const StatsWindow = (props) => {
 
   return (
     <>
-      <div className="backButtonContainer">
-        <button
+      {/* <div className="backButtonContainer"> */}
+        {/* <button
+          title="Return to main menu"
+          className="backButton"
+          onClick={cancelHandler}
+        >
+          <img className="backButtonImg" src={backButton} alt="rback button" />
+        </button> */}
+      {/* </div> */}
+      <nav className="tabs">
+      <button
           title="Return to main menu"
           className="backButton"
           onClick={cancelHandler}
         >
           <img className="backButtonImg" src={backButton} alt="rback button" />
         </button>
-      </div>
-      <div className="tabs">
-        
-      </div>
+
+        <button class="tab" onClick={null}>
+        </button>
+        <button class="tab" onClick={null}>
+        </button>
+        <button class="tab" onClick={null}>
+        </button>
+      </nav>
       <div className="activitiesList">{activitiesJSX}</div>
     </>
   );
