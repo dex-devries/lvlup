@@ -3,31 +3,36 @@ import backButton from "../../assets/no-bg/back-nobg.png";
 import "./BadgeWindow.css";
 
 
-// TODO: style badges to wrap in 400px width 
+// TODO: fix unique key prop problem
 
+// Expected props:
+// stats object - to pass to badgeCollector
 const BadgeWindow = (props) => {
   const cancelHandler = () => {
     props.close(false);
   };
 
-  console.log(props.stats);
+  // console.log(props.stats);
+  // collect badges earned with biadgeCollector and require images context
   const badges = badgeCollector(props.stats);
   const images = require.context("../../assets/icons/badges", true);
 
+  // populate JSX
   let badgesJSX = [];
-
   for (let attr in badges) {
+    // Attribute header h2
     badgesJSX.push(
       <h2 key={attr} className="badgeAttrHead">
         {attr.toUpperCase()}
       </h2>
     );
-
+    
+    // Badges under header - inner loop through badges object
     let attrBadges = [];
     for (let badge of badges[attr]) {
-      // logic to exclude targeting.png - by default included from badgeHandler
+      // logic to exclude targeting.png - by default included from badgeHandler -> badgeCollector
       if (badge[0] !== "./targeting.png") {
-        // push badge img JSX
+        // push badge img and title JSX
         attrBadges.push(
           <div className="badgeContainer">
             <img
@@ -36,7 +41,7 @@ const BadgeWindow = (props) => {
               key={badge[0]}
               alt="badge"
             />
-            <h6 className="badgesTitle">{badge[1].toUpperCase()}</h6>
+            <h6 key={badge[1]} className="badgesTitle">{badge[1].toUpperCase()}</h6>
           </div>
         );
       }
