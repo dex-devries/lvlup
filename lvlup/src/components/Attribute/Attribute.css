@@ -24,6 +24,7 @@
   float: left;
   width: 210px;
   height: 30px;
+  padding-left: 0px;
 }
 
 .addThumb {
@@ -60,7 +61,7 @@
   border: 1px solid rgb(0, 0, 0);
   width: 32px;
   height: 30px;
-  margin-left: 8px;
+  margin-right: 6px;
   float: left;
   background-color: rgb(113, 113, 113);
   color: rgb(0, 0, 0);

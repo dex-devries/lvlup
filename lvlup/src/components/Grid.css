@@ -1,11 +1,14 @@
+/* Todo: Mobile optimizations */
+/* Collapsing grid? */
+
 .layout {
     position: fixed;
     top: 90px;
-    width: 400px;
+    width: 360px;
     height: 800px;
 
     margin: auto;
-    margin-left: 20px;
+    margin-left: 10px;
 
     color: white;
     font-size: 20px;
@@ -16,9 +19,17 @@
       "strength skill" 17%
       "attack presence" 17%
       "alchemy power" 17%
-      / 49% 49%;
+      / 50% 50%;
     gap: 12px;
+    column-gap: 16px;
   }
+
+  /* @media (max-width: 380px) {
+    .layout {
+      margin-left: 0px;
+      transform: scale(0.9);
+    }
+  } */
 
   /* @media screen and (max-width: 400px) {
     .layout {

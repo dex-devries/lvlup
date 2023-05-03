@@ -1,7 +1,7 @@
 .badgeWindowCard {
-    margin-left: 21px;
+    margin-left: 10px;
     padding-top: 80px;
-    width: 400px;
+    width: 380px;
     height: 800px;
 }
 
@@ -18,7 +18,7 @@
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    width: 400px;
+    width: 380px;
     margin-bottom: 0px;
 }
 
