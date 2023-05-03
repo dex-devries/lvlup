@@ -1,8 +1,9 @@
 /* Todo: Mobile optimizations */
 
 .header {
+    /* margin: auto; */
     position: fixed;
-    padding-left: 93px;
+    padding-left: 69px;
     height: 85px;
     width: 380px;
     background-color: black;
