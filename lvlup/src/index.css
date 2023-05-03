@@ -10,6 +10,24 @@ html {
 
 body {
   margin: auto;
-  width: 480px;
+  width: 390px;
   background-color: #000000;
+}
+
+@media (max-width: 395px) and (min-width: 378px) {
+  .main {
+      transform: scale(0.92);
+      /* float: left; */
+      margin: auto;
+      /* margin-left: auto; */
+      /* width: 330px; */
+  }
+}
+
+@media (max-width: 378px) {
+  .main {
+    transform: scale(0.90);
+    float: left;
+    margin-left: 1px;
+  }
 }
