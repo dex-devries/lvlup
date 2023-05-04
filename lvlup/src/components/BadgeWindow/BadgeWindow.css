@@ -3,6 +3,9 @@
     padding-top: 80px;
     width: 380px;
     height: 800px;
+    position: fixed;
+    margin:auto;
+    padding-left: 8px;
 }
 
 .badgeAttrHead {
@@ -43,7 +46,7 @@
     z-index: 2;
     position: fixed;
     top: 80px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .badgesTitle {
