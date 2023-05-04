@@ -63,10 +63,10 @@ function App() {
   // Header component: logo
   // stats, addUserData function -> Grid component
   return (
-    <>
+    <div className="main">
       <Header />
       <Grid stats={stats} dataHandler={addUserData} data={activitiesList}/>
-    </>
+    </div>
   );
 }
 
