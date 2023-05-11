@@ -1,11 +1,12 @@
 .badgeWindowCard {
-    margin-left: 10px;
-    padding-top: 80px;
+    /* margin-left: 10px; */
+    /* padding-top: 80px; */
     width: 380px;
     height: 800px;
-    position: fixed;
-    margin:auto;
-    padding-left: 8px;
+    /* position: fixed; */
+    float: left;
+    /* margin:auto; */
+    /* padding-left: 8px; */
 }
 
 .badgeAttrHead {
