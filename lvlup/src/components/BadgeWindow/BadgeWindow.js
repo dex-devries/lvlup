@@ -2,7 +2,6 @@ import { badgeCollector } from "../Logic/badgeCollectionHandler";
 import backButton from "../../assets/no-bg/back-nobg.png";
 import "./BadgeWindow.css";
 
-
 // TODO: fix unique key prop problem
 
 // Expected props:
@@ -19,6 +18,13 @@ const BadgeWindow = (props) => {
 
   // populate JSX
   let badgesJSX = [];
+
+  // spacing for hardcoded fix of header problem
+  badgesJSX.push(
+    <div class="spacer">
+    </div>
+  );
+
   for (let attr in badges) {
     // Attribute header h2
     badgesJSX.push(
