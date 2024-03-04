@@ -5,7 +5,7 @@ import "./Badge.css";
 const Badge = (props) => {
 
   const badgeClickHandler = () => {
-    console.log("clicked badge");
+    // console.log("clicked badge");
     props.badgeWindowOpen(true);
   }
 
